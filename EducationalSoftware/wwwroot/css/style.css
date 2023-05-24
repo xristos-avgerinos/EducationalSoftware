@@ -1,0 +1,56 @@
+/* Styles go here */
+
+.intto {text-align:left; width:20px; font: 16px Arial; margin: 0 0 -10px 33px;} 
+.intsymb {font:italic 40px/45px Arial, Georgia;}
+.intfrom {text-align:left; width:20px; overflow:visible; font: 16px Arial; margin: -16px 0 0 28px;}
+.inttext {font-size: 17px; display:inline-block; position: relative;  margin-left: -10px; margin-right: -12px; transform: translateY(-75%); }
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 3; /* Sit on top */
+    left: 10%;
+    top: 3%;
+    width: 80%; /* Full width */
+    height: 95%; /* Full height */
+    overflow: auto; /*rgb(255, 255, 255) scroll if needed */
+    background-color: #F0F0F0;
+    padding-top: 20px;
+}
+
+
+
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: black;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+.center {
+  margin: auto;
+  width: 80%;
+  border: 1px solid ;
+  padding: 10px;
+  
+}
