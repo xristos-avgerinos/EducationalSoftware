@@ -1,5 +1,309 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/home/sb-admin-2.min.css" rel="stylesheet">
+    <link href="~/css/style.css" rel="stylesheet">
+    <style>
+
+        #myButton {
+            cursor: pointer;
+        }
+
+            #myButton:hover {
+                background-color: #f6f6f6;
+            }
+
+            #myButton:focus {
+                outline: none;
+            }
+
+        .container {
+            display: flex;
+        }
+
+            .container img {
+                width: 120px; /* adjust the size of the image as needed */
+                height: 120px;
+                margin-right: 20px; /* adjust the spacing between the image and paragraph */
+            }
+
+        .header {
+            font-family: 'Segoe UI';
+            font-style: italic;
+            font-size: 19px;
+            display: inline-block; /* Add display property */
+            border-bottom: 2px solid #0D76FC; /* Border bottom instead of underline */
+            padding-bottom: 2px;
+        }
+    </style>
+</head>
+
+<body id="page-top">
+
+
+    <!-- Hidden modal for OOP lesson -->
+    <div id="OOPLesson" class="modal">
+        <h1 style="text-align:center;">OOPLesson</h1>
+        <br>
+        <div class="center">
+            <span onclick="document.getElementById('OOPLesson').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <br />
+
+            <label>Σύμφωνα με τα παραπάνω το ολοκλήρωμα δίνει το εμβαδόν Ε(Ω) του χωρίου Ω που περικλείεται από τη γραφική παράσταση της f τον άξονα xʹx και τις ευθείες x = α και x = β.></label>
+        </div>
+        <br>
+    </div>
+
+    <!-- Hidden modal for OOP Application Develpoment lesson -->
+    <div id="OOP_ApplicationDevelpomentLesson" class="modal">
+        <h1 style="text-align:center;">OOP_ApplicationDevelpomentLesson</h1>
+        <br>
+        <div class="center">
+            <span onclick="document.getElementById('OOP_ApplicationDevelpomentLesson').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <br />
+
+            <label>Σύμφωνα με τα παραπάνω το ολοκλήρωμα δίνει το εμβαδόν Ε(Ω) του χωρίου Ω που περικλείεται από τη γραφική παράσταση της f τον άξονα xʹx και τις ευθείες x = α και x = β.></label>
+        </div>
+        <br>
+    </div>
+
+    <!-- Hidden modal for InternetTech lesson -->
+    <div id="InternetTechLesson" class="modal">
+        <h1 style="text-align:center;">InternetTechLesson</h1>
+        <br>
+        <div class="center">
+            <span onclick="document.getElementById('InternetTechLesson').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <br />
+
+            <label>Σύμφωνα με τα παραπάνω το ολοκλήρωμα δίνει το εμβαδόν Ε(Ω) του χωρίου Ω που περικλείεται από τη γραφική παράσταση της f τον άξονα xʹx και τις ευθείες x = α και x = β.></label>
+        </div>
+        <br>
+    </div>
+
+    <!-- Hidden modal for Advanced Soft Tech lesson -->
+    <div id="AdvancedSoftTechLesson" class="modal">
+        <h1 style="text-align:center;">AdvancedSoftTechLesson</h1>
+        <br>
+        <div class="center">
+            <span onclick="document.getElementById('AdvancedSoftTechLesson').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <br />
+
+            <label>Σύμφωνα με τα παραπάνω το ολοκλήρωμα δίνει το εμβαδόν Ε(Ω) του χωρίου Ω που περικλείεται από τη γραφική παράσταση της f τον άξονα xʹx και τις ευθείες x = α και x = β.></label>
+        </div>
+        <br>
+    </div>
+
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column" style="background-color:white;">
+
+            <!-- Main Content -->
+            <div id="content" style="background-color:white;">
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center  justify-content-between mb-1">
+                        <h1 class="h2 mb-10 text-gray-800 offset-0">
+                            Μηχανικός Λογισμικού
+                        </h1>
+                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 10rem;"
+                             src="~/img/SoftwareEngineer.svg" alt="...">
+
+                    </div>
+                    <p align="justify" style="font-family:courier;">
+
+
+                        Ο Μηχανικός Λογισμικού (Software Engineer) είναι επαγγελματίας που ασχολείται με τον σχεδιασμό, την ανάπτυξη, τον έλεγχο και τη συντήρηση λογισμικού. Ο ρόλος του συνδυάζει την τεχνολογία, τη δημιουργικότητα και την προγραμματιστική γνώση για τη δημιουργία λειτουργικών και αποδοτικών λογισμικών εφαρμογών.
+
+                        Οι καθήκοντα ενός Μηχανικού Λογισμικού περιλαμβάνουν την ανάλυση απαιτήσεων, τον σχεδιασμό αρχιτεκτονικής, την κωδικοποίηση, τον έλεγχο και τη δοκιμή λογισμικού, καθώς και τη συντήρηση και τη βελτίωση υπάρχοντος λογισμικού. Οι μηχανικοί λογισμικού συνεργάζονται συχνά με ομάδες ανάπτυξης, σχεδιαστές και επαγγελματίες τεχνολογίας για να αντιμετωπίσουν προκλήσεις και να δημιουργήσουν λογισμικό που να πληροί τις απαιτήσεις και τις προσδοκίες των χρηστών.
+
+                        Για να είναι αποτελεσματικοί, οι Μηχανικοί Λογισμικού πρέπει να έχουν καλή κατανόηση προγραμματισμού, αλγορίθμων, δομών δεδομένων και αρχών λογισμικού. Επιπλέον, πρέπει να είναι εξοικειωμένοι με τις σύγχρονες τεχνολογίες και τα εργαλεία ανάπτυξης λογισμικού. Η δεξιότητα στην επικοινωνία, η ικανότητα προβληματισμού και η συνεχής εκμάθηση είναι επίσης σημαντικές για την επιτυχία στον ρόλο του Μηχανικού Λογισμικού.
+                    </p>
+                    <br>
+                    <h4 class="header">Μαθήματα(4)</h4>
+                    <br><br>
+                    <!-- First Row -->
+                    <div class="row">
+
+                        <div class="col-lg-6 mb-4">
+
+
+                            <div class="card shadow mb-4" id="myButton" onclick="document.getElementById('OOPLesson').style.display='block'">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary" style="text-align:center">
+                                        Αντικειμενοστρεφής Προγραμματισμός
+                                    </h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="container">
+                                        <img src="~/img/OOPLesson.webp" alt="Your Photo">
+                                        <p align="justify">
+
+                                            Το μάθημα Αντικειμενοστραφής Προγραμματισμός προσφέρει σε έναν μηχανικό λογισμικού αρκετά οφέλη. Καταρχάς, τον εισάγει στις βασικές αρχές και τεχνικές του αντικειμενοστραφούς προγραμματισμού, οι οποίες αποτελούν τη βάση της σύγχρονης λογισμικής ανάπτυξης.
+
+                                            Μέσω του μαθήματος, ο μηχανικός λογισμικού θα μάθει να σχεδιάζει και να υλοποιεί προγράμματα που βασίζονται σε αντικείμενα και κλάσεις.
+
+                                            Επιπλέον, ο μηχανικός λογισμικού θα μάθει να χρησιμοποιεί συνήθεις αντικειμενοστραφείς γλώσσες προγραμματισμού, όπως την Java ή την C++, οι οποίες είναι δημοφιλείς στη βιομηχανία του λογισμικού. Αυτή η γνώση είναι αναγκαία για τη συμμετοχή σε επαγγελματικά έργα λογισμικού και την ανάπτυξη προηγμένων εφαρμογών.
+
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-lg-6 mb-4">
+
+
+                            <div class="card shadow mb-4" id="myButton" onclick="document.getElementById('OOP_ApplicationDevelpomentLesson').style.display='block'">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary " style="text-align:center">
+                                        Αντικειμενοστρεφής Ανάπτυξη Εφαρμογών
+                                    </h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="container">
+                                        <img src="~/img/OOP_ApplicationDevelpomentLesson.png" alt="Your Photo">
+                                        <p align="justify">
+                                            Το μάθημα Αντικειμενοστρεφής Ανάπτυξη Εφαρμογών προσφέρει σε έναν μηχανικό λογισμικού πολλά οφέλη.
+
+                                            Μέσω του μαθήματος,  θα μάθει τη σχεδίαση και υλοποίηση ευέλικτων και επεκτάσιμων εφαρμογών με τη χρήση αντικειμένων,
+                                            κλάσεων, και συναρτήσεων. Αυτό το είδος ανάπτυξης επιτρέπει τη δημιουργία προγραμμάτων με μεγάλη πολυπλοκότητα και λειτουργικότητα.
+
+                                            Το μάθημα αναπτύσσει επίσης δεξιότητες όπως η ομαδική εργασία, η διαχείριση έργων και η ανάπτυξη με βάση τις βέλτιστες πρακτικές. 
+                                            Αυτές οι δεξιότητες είναι απαραίτητες για την αποτελεσματική συμμετοχή σε ομάδες ανάπτυξης λογισμικού και την επίτευξη επιτυχημένων 
+                                            αποτελεσμάτων.
+                                            <br /><br />
+                                           
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                    <!-- second Row -->
+                    <div class="row">
+
+
+
+
+                        <div class="col-lg-6 mb-4">
+
+
+                            <div class="card shadow mb-4" id="myButton" onclick="document.getElementById('SoftTechLesson').style.display='block'">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary " style="text-align:center">
+                                        Τεχνολογία Λογισμικού
+                                    </h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="container">
+                                        <img src="~/img/SoftTechLesson.png" alt="Your Photo">
+                                        <p align="justify">
+                                            Το μάθημα Τεχνολογία Λογισμικού παρέχει τις βασικές γνώσεις σχετικά με την τεχνολογία που αφορά
+                                            την ανάπτυξη λογισμικού. Από αυτό το μάθημα, ο σχεδιαστής μαθαίνει για τις διάφορες τεχνολογίες που χρησιμοποιούνται στην ανάπτυξη
+                                            λογισμικού, όπως γλώσσες προγραμματισμού, πλατφόρμες ανάπτυξης, βάσεις δεδομένων και άλλα εργαλεία.
+
+                                            Μέσω αυτού του μαθήματος, ο σχεδιαστής εμπειρίας χρηστών αποκτά κατανόηση για τον τρόπο με τον οποίο το λογισμικό αναπτύσσεται
+                                            και λειτουργεί. Μετα την παρακολούθηση αυτού του μαθήματος θα μπορεί να σχεδιάσει και να αναπτύξει ρεαλιστικά και εκτελέσιμα σχέδια
+                                            για βελτιωμένη εμπειρία χρήστη.
+                                            <br />
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 mb-4">
+
+
+                            <div class="card shadow mb-4" id="myButton" onclick="document.getElementById('AdvancedSoftTechLesson').style.display='block'">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary " style="text-align:center">
+                                       Σύγχρονα Θέματα Τεχνολογίας Λογισμικού
+                                    </h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="container">
+                                        <img src="~/img/AdvancedSoftTechLesson.png" alt="Your Photo">
+                                        <p align="justify">
+                                            Το μάθημα Τεχνολογία Λογισμικού παρέχει τις βασικές γνώσεις σχετικά με την τεχνολογία που αφορά
+                                            την σύγχρονη ανάπτυξη λογισμικού. Μέσω του μαθήματος, ο μηχανικός λογισμικού θα εξοικειωθεί με νέες τεχνολογίες 
+                                            και εργαλεία λογισμικού που αναδύονται, όπως αναπτυξιακά περιβάλλοντα, αυτοματοποίηση διαδικασιών
+                                            και αναλυτικά δεδομένα.
+
+                                            Επιπλέον, το μάθημα αναδεικνύει τη σημασία της συνεχούς μάθησης και της προσαρμογής σε αλλαγές, καθώς η τεχνολογία λογισμικού
+                                            εξελίσσεται με ταχείς ρυθμούς. Ο μηχανικός λογισμικού θα αναπτύξει δεξιότητες αναζήτησης, εκτίμησης και επιλογής νέων τεχνολογιών
+                                            που είναι κατάλληλες για συγκεκριμένα έργα και απαιτήσεις.
+                                            <br />
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+    <br />
+    <br />
+    <br />
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="~/js/home/vendor/jquery/jquery.min.js"></script>
+    <script src="~/js/home/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+    <!-- Page level plugins -->
+    <script src="~/js/home/vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="~/js/home/chart-area-demo.js"></script>
+    <script src="~/js/home/chart-pie-demo.js"></script>
+
+
+
+
+
+
+
+</body>
+
+</html>
+

@@ -1,23 +1,295 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/home/sb-admin-2.min.css" rel="stylesheet">
+    <link href="~/css/style.css" rel="stylesheet">
     <style>
-        .container {
-            display: flex;
-            align-items: center;
+
+        #myButton {
+            cursor: pointer;
         }
 
-        .container img {
-            width: 200px; /* adjust the size of the image as needed */
-            height: auto;
-            margin-right: 20px; /* adjust the spacing between the image and paragraph */
+            #myButton:hover {
+                background-color: #f6f6f6;
+            }
+
+            #myButton:focus {
+                outline: none;
+            }
+
+        .container {
+            display: flex;
+        }
+
+            .container img {
+                width: 120px; /* adjust the size of the image as needed */
+                height: 120px;
+                margin-right: 20px; /* adjust the spacing between the image and paragraph */
+            }
+
+        .header {
+            font-family: 'Segoe UI';
+            font-style: italic;
+            font-size: 19px;
+            display: inline-block; /* Add display property */
+            border-bottom: 2px solid #0D76FC; /* Border bottom instead of underline */
+            padding-bottom: 2px;
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <img src="~/img/AiSpecialist.png" alt="Your Photo">
-        <p>Your paragraph text goes here.</p>
+
+<body id="page-top">
+
+
+    <!-- Hidden modal for Human Network Security lesson -->
+    <div id="NetworkSecurityLesson" class="modal">
+        <h1 style="text-align:center;">NetworkSecurityLesson</h1>
+        <br>
+        <div class="center">
+            <span onclick="document.getElementById('NetworkSecurityLesson').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <br />
+
+            <label>Σύμφωνα με τα παραπάνω το ολοκλήρωμα δίνει το εμβαδόν Ε(Ω) του χωρίου Ω που περικλείεται από τη γραφική παράσταση της f τον άξονα xʹx και τις ευθείες x = α και x = β.></label>
+        </div>
+        <br>
     </div>
+
+    <!-- Hidden modal for Information Systems Security lesson -->
+    <div id="InformationSystemsSecurityLesson" class="modal">
+        <h1 style="text-align:center;">InformationSystemsSecurityLesson</h1>
+        <br>
+        <div class="center">
+            <span onclick="document.getElementById('InformationSystemsSecurityLesson').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <br />
+
+            <label>Σύμφωνα με τα παραπάνω το ολοκλήρωμα δίνει το εμβαδόν Ε(Ω) του χωρίου Ω που περικλείεται από τη γραφική παράσταση της f τον άξονα xʹx και τις ευθείες x = α και x = β.></label>
+        </div>
+        <br>
+    </div>
+
+    <!-- Hidden modal for Cryptography Lesson -->
+    <div id="CryptographyLesson" class="modal">
+        <h1 style="text-align:center;">CryptographyLesson</h1>
+        <br>
+        <div class="center">
+            <span onclick="document.getElementById('CryptographyLesson').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <br />
+
+            <label>Σύμφωνα με τα παραπάνω το ολοκλήρωμα δίνει το εμβαδόν Ε(Ω) του χωρίου Ω που περικλείεται από τη γραφική παράσταση της f τον άξονα xʹx και τις ευθείες x = α και x = β.></label>
+        </div>
+        <br>
+    </div>
+
+    <!-- Hidden modal for Code Theory lesson -->
+    <div id="CodeTheoryLesson" class="modal">
+        <h1 style="text-align:center;">CodeTheoryLesson</h1>
+        <br>
+        <div class="center">
+            <span onclick="document.getElementById('CodeTheoryLesson').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <br />
+
+            <label>Σύμφωνα με τα παραπάνω το ολοκλήρωμα δίνει το εμβαδόν Ε(Ω) του χωρίου Ω που περικλείεται από τη γραφική παράσταση της f τον άξονα xʹx και τις ευθείες x = α και x = β.></label>
+        </div>
+        <br>
+    </div>
+
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column" style="background-color:white;">
+
+            <!-- Main Content -->
+            <div id="content" style="background-color:white;">
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center  justify-content-between mb-1">
+                        <h1 class="h2 mb-10 text-gray-800 offset-0">
+                            Ειδικός Ασφάλειας και Προστασίας Δεδομένων
+                        </h1>
+                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 10rem;"
+                             src="~/img/CybersecuritySpecialist.webp" alt="...">
+
+                    </div>
+                    <p align="justify" style="font-family:courier;">
+                        Ο Ειδικός Ασφάλειας και Προστασίας Δεδομένων, γνωστός και ως Ειδικός Κυβερνοασφάλειας, είναι επαγγελματίας που εξειδικεύεται στην προστασία των πληροφοριών, δεδομένων και συστημάτων από κυβερνοεπιθέσεις, κακόβουλο λογισμικό και άλλες απειλές στην κυβερνοασφάλεια.
+
+                        Οι ειδικοί αυτοί αναλαμβάνουν να προστατεύσουν τις πληροφορίες και τα δεδομένα που ανήκουν σε μια εταιρεία ή οργανισμό από μη εξουσιοδοτημένη πρόσβαση, κλοπή ή καταστροφή. Αυτό μπορεί να περιλαμβάνει την ανάπτυξη και την εφαρμογή ασφαλών πολιτικών και διαδικασιών, την ανάλυση και την αποτροπή κυβερνοεπιθέσεων, καθώς και την παρακολούθηση και ανίχνευση ασφαλείας συστημάτων.
+
+                        Οι κύριες ευθύνες ενός Ειδικού Ασφάλειας και Προστασίας Δεδομένων περιλαμβάνουν την ανάλυση και αξιολόγηση κινδύνων, την ανάπτυξη και εφαρμογή ασφαλών πρακτικών, την αποκατάσταση και αντίδραση σε παραβιάσεις ασφαλείας και τελος την παροχή εκπαίδευσης και ευαισθητοποίησης στους χρήστες σχετικά με τις βέλτιστες πρακτικές ασφαλείας και την αποτροπή των κυβερνοεπιθέσεων.
+                        
+                        Συνοψίζοντας η δουλειά του Ειδικού Ασφάλειας και Προστασίας Δεδομένων είναι κρίσιμη για τις εταιρείες και τους οργανισμούς που διαχειρίζονται μεγάλο όγκο πληροφοριών και δεδομένων, εξασφαλίζοντας την εμπιστευτικότητα, την ακεραιότητα και τη διαθεσιμότητά τους.
+                    </p>
+                    <br>
+                    <h4 class="header">Μαθήματα(4)</h4>
+                    <br><br>
+                    <!-- First Row -->
+                    <div class="row">
+
+                        <div class="col-lg-6 mb-4">
+
+
+                            <div class="card shadow mb-4" id="myButton" onclick="document.getElementById('NetworkSecurityLesson').style.display='block'">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary" style="text-align:center">
+                                        Ασφάλεια Δικτύων
+                                    </h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="container">
+                                        <img src="~/img/NetworkSecurityLesson.jpg" alt="Your Photo">
+                                        <p align="justify">
+
+                                            Το μάθημα Ασφάλεια Δικτύων προσφέρει στον Ειδικό Ασφάλειας και Προστασίας Δεδομένων τις απαραίτητες γνώσεις για την ασφάλεια των
+                                            δικτύων. Μέσω αυτού του μαθήματος, αποκτά κατανόηση των απειλών που αντιμετωπίζουν τα δίκτυα και των τεχνικών προστασίας που μπορούν
+                                            να χρησιμοποιηθούν για την αντιμετώπισή τους. Μπορεί να μάθει για την ανάλυση ασφαλείας δικτύων, την ανίχνευση και πρόληψη επιθέσεων,
+                                            την ασφάλεια των δρομολογητών και των φωτογραφικών δικτύων, καθώς και την εφαρμογή τεχνικών προστασίας δικτύων. Αυτή η γνώση είναι
+                                            ουσιώδης για την ασφάλεια και προστασία των δικτύων ,της επικοινωνίας και των δεδομένων που μεταδίδονται μέσω αυτών.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-lg-6 mb-4">
+
+
+                            <div class="card shadow mb-4" id="myButton" onclick="document.getElementById('InformationSystemsSecurityLesson').style.display='block'">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary" style="text-align:center">Ασφάλεια Πληροφοριακών Συστημάτων</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="container">
+                                        <img src="~/img/InformationSystemsSecurityLesson.webp" alt="Your Photo">
+                                        <p align="justify">
+                                            Το μάθημα Ασφάλεια Πληροφοριακών Συστημάτων προσφέρει στον Ειδικό Ασφάλειας και Προστασίας Δεδομένων τις απαραίτητες γνώσεις για την
+                                            προστασία των πληροφοριακών συστημάτων. Μέσω αυτού του μαθήματος, αποκτά κατανόηση των απειλών που αντιμετωπίζουν τα πληροφοριακά 
+                                            συστήματα και τις τεχνικές προστασίας που μπορούν να χρησιμοποιηθούν για την αντιμετώπισή τους. Μπορεί να μάθει για την επιθετική 
+                                            ανάλυση ασφαλείας, την ανίχνευση και απόκριση σε παραβιάσεις, την ανάπτυξη πολιτικών ασφαλείας και την εφαρμογή τεχνολογιών προστασίας 
+                                            δεδομένων. Αυτή η γνώση είναι ουσιώδης για την ασφάλεια και προστασία των πληροφοριών και των πληροφοριακών συστημάτων.
+                                            <br /><br />
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                    <!-- second Row -->
+                    <div class="row">
+
+
+
+
+                        <div class="col-lg-6 mb-4">
+
+
+                            <div class="card shadow mb-4" id="myButton" onclick="document.getElementById('CryptographyLesson').style.display='block'">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary" style="text-align:center">
+                                        Κρυπτογραφία
+                                    </h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="container">
+                                        <img src="~/img/CryptographyLesson.png" alt="Your Photo">
+                                        <p align="justify">
+                                            Το μάθημα της κρυπτογραφίας προσφέρει στον Ειδικό Ασφάλειας και Προστασίας Δεδομένων κρίσιμες γνώσεις για την ασφάλεια των δεδομένων.
+                                            Μέσω αυτού του μαθήματος, αποκτά κατανόηση των βασικών αρχών της κρυπτογραφίας και των αλγορίθμων κρυπτογράφησης. Μπορεί να μάθει για
+                                            τη χρήση συμμετρικών και ασύμμετρων κλειδιών, τη δημιουργία ψηφιακών υπογραφών και την ασφάλεια των πρωτοκόλλων κρυπτογράφησης.
+                                            Αυτή η γνώση είναι ουσιώδης για την προστασία των δεδομένων και τη διατήρηση της εμπιστευτικότητας και ακεραιότητας των πληροφοριών
+                                            που υπάρχουν σε ένα σύστημα ή δίκτυο.
+                                            <br /><br />
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 mb-4">
+
+
+                            <div class="card shadow mb-4" id="myButton" onclick="document.getElementById('CodeTheoryLesson').style.display='block'">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary " style="text-align:center">
+                                        Θεωρία Πληροφοριών και Κωδίκων
+                                    </h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="container">
+                                        <img src="~/img/CodeTheoryLesson.png" alt="Your Photo">
+                                        <p align="justify">
+                                            Το μάθημα Θεωρία Πληροφοριών και Κωδίκων προσφέρει στον Ειδικό Ασφάλειας και Προστασίας Δεδομένων τις απαραίτητες γνώσεις για τη θεωρητική βάση των πληροφοριών και των κωδίκων.
+                                            Μέσω αυτού του μαθήματος, αποκτά κατανόηση των βασικών αρχών της πληροφορικής θεωρίας, όπως η εντροπία, οι πηγές πληροφορίας και οι κωδικοποιητές. Μπορεί να μάθει για τη συμπίεση δεδομένων, την κωδικοποίηση και αποκωδικοποίηση, την ανίχνευση και διόρθωση σφαλμάτων και τη θεωρία των κρυπτογραφικών κωδίκων. 
+                                            Αυτή η γνώση είναι ουσιώδης για την κατανόηση των αλγορίθμων και των μεθόδων που χρησιμοποιούνται για την ασφάλεια και προστασία των δεδομένων.
+                                            <br />
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+    <br />
+    <br />
+    <br />
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="~/js/home/vendor/jquery/jquery.min.js"></script>
+    <script src="~/js/home/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+    <!-- Page level plugins -->
+    <script src="~/js/home/vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="~/js/home/chart-area-demo.js"></script>
+    <script src="~/js/home/chart-pie-demo.js"></script>
+
+
+
+
+
+
+
 </body>
+
 </html>
+
