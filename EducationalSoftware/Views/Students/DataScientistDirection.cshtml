@@ -14,7 +14,15 @@
 
     <!-- Custom styles for this template-->
     <link href="css/home/sb-admin-2.min.css" rel="stylesheet">
-    <link href="~/css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Style -->
+    <link rel="stylesheet" href="css/modalstyle.css">
+    
     <style>
 
         #myButton {
@@ -53,58 +61,141 @@
 
 <body id="page-top">
 
+   
 
-    <!-- Hidden modal for statistics lesson -->
-    <div id="StatLesson" class="modal">
-        <h1 style="text-align:center;">statistics</h1>
-        <br>
-        <div class="center">
-            <span onclick="document.getElementById('StatLesson').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <br />
-            
-            <label>Σύμφωνα με τα παραπάνω το ολοκλήρωμα δίνει το εμβαδόν Ε(Ω) του χωρίου Ω που περικλείεται από τη γραφική παράσταση της f τον άξονα xʹx και τις ευθείες x = α και x = β.></label>
+    <!-- Statistics Modal -->
+    <div class="modal fade" id="StatModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header py-2 text-center" style="background-color:#f6f6f6;">
+
+                 
+
+
+                    <h5 class="modal-title w-100 m-0 font-weight-bold text-primary " style="text-align:center" id="exampleModalCenterTitle">Στατιστική</h5>
+                    
+
+                    <button type="button" class="btn-close align-content-end" data-dismiss="modal">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Mist enveloped the ship three hours out from port. A shining crescent far beneath the flying vessel. All their equipment and instruments are alive. The sky was cloudless and of a deep dark blue. A shining crescent far beneath the flying vessel.</p>
+                    <p>All their equipment and instruments are alive. A shining crescent far beneath the flying vessel. The sky was cloudless and of a deep dark blue. </p>
+                    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                
+                    <div class=" align-bottom h4 " style="text-align:center">
+
+                        <button class=" alert-success">Κάνε το quiz! </button>
+
+                    </div>
+                </div>
+                
+            </div>
         </div>
-        <br>
     </div>
 
-     <!-- Hidden modal for databases lesson -->
-    <div id="DbLesson" class="modal">
-        <h1 style="text-align:center;">databases</h1>
-        <br>
-        <div class="center">
-            <span onclick="document.getElementById('DbLesson').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <br />
-            
-            <label>Σύμφωνα με τα παραπάνω το ολοκλήρωμα δίνει το εμβαδόν Ε(Ω) του χωρίου Ω που περικλείεται από τη γραφική παράσταση της f τον άξονα xʹx και τις ευθείες x = α και x = β.></label>
+
+    
+
+    <!-- Database Modal -->
+    <div class="modal fade" id="DatabaseModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header py-2 text-center" style="background-color:#f6f6f6;">
+
+
+
+
+                    <h5 class="modal-title w-100 m-0 font-weight-bold text-primary " style="text-align:center" id="exampleModalCenterTitle">Βάσεις Δεδομένων</h5>
+
+
+                    <button type="button" class="btn-close align-content-end" data-dismiss="modal">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Mist enveloped the ship three hours out from port. A shining crescent far beneath the flying vessel. All their equipment and instruments are alive. The sky was cloudless and of a deep dark blue. A shining crescent far beneath the flying vessel.</p>
+                    <p>All their equipment and instruments are alive. A shining crescent far beneath the flying vessel. The sky was cloudless and of a deep dark blue. </p>
+                    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+                    <div class=" align-bottom h4 " style="text-align:center">
+
+                        <button class=" alert-success">Κάνε το quiz! </button>
+
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <br>
     </div>
 
-     <!-- Hidden modal for databases 2 lesson -->
-    <div id="Db2Lesson" class="modal">
-        <h1 style="text-align:center;">databases 2</h1>
-        <br>
-        <div class="center">
-            <span onclick="document.getElementById('Db2Lesson').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <br />
-            
-            <label>Σύμφωνα με τα παραπάνω το ολοκλήρωμα δίνει το εμβαδόν Ε(Ω) του χωρίου Ω που περικλείεται από τη γραφική παράσταση της f τον άξονα xʹx και τις ευθείες x = α και x = β.></label>
-        </div>
-        <br>
-    </div>
 
-    <!-- Hidden modal for Data Analysis lesson -->
-    <div id="DataAnalysisLesson" class="modal">
-        <h1 style="text-align:center;">Data Analysis</h1>
-        <br>
-        <div class="center">
-            <span onclick="document.getElementById('DataAnalysisLesson').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <br />
 
-            <label>Σύμφωνα με τα παραπάνω το ολοκλήρωμα δίνει το εμβαδόν Ε(Ω) του χωρίου Ω που περικλείεται από τη γραφική παράσταση της f τον άξονα xʹx και τις ευθείες x = α και x = β.></label>
+    <!-- Database2 Modal -->
+    <div class="modal fade" id="Database2Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header py-2 text-center" style="background-color:#f6f6f6;">
+
+
+
+
+                    <h5 class="modal-title w-100 m-0 font-weight-bold text-primary " style="text-align:center" id="exampleModalCenterTitle">Συστήματα Διαχείρισης Βάσεων Δεδομένων</h5>
+
+
+                    <button type="button" class="btn-close align-content-end" data-dismiss="modal">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Mist enveloped the ship three hours out from port. A shining crescent far beneath the flying vessel. All their equipment and instruments are alive. The sky was cloudless and of a deep dark blue. A shining crescent far beneath the flying vessel.</p>
+                    <p>All their equipment and instruments are alive. A shining crescent far beneath the flying vessel. The sky was cloudless and of a deep dark blue. </p>
+                    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+                    <div class=" align-bottom h4 " style="text-align:center">
+
+                        <button class=" alert-success">Κάνε το quiz! </button>
+
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <br>
     </div>
+    
+
+    <!-- DataAnalysis Modal -->
+    <div class="modal fade" id="DataAnalysisModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header py-2 text-center" style="background-color:#f6f6f6;">
+
+
+
+
+                    <h5 class="modal-title w-100 m-0 font-weight-bold text-primary " style="text-align:center;" id="exampleModalCenterTitle">Αναλυτική Δεδομένων</h5>
+
+
+                    <button type="button" class="btn-close align-content-end" data-dismiss="modal">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Mist enveloped the ship three hours out from port. A shining crescent far beneath the flying vessel. All their equipment and instruments are alive. The sky was cloudless and of a deep dark blue. A shining crescent far beneath the flying vessel.</p>
+                    <p>All their equipment and instruments are alive. A shining crescent far beneath the flying vessel. The sky was cloudless and of a deep dark blue. </p>
+                    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+                    <div class=" align-bottom h4 " style="text-align:center">
+
+                        <button class=" alert-success">Κάνε το quiz! </button>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+
+    
+
 
 
     <!-- Page Wrapper -->
@@ -146,7 +237,7 @@
                         <div class="col-lg-6 mb-4">
 
 
-                            <div class="card shadow mb-4" id="myButton" onclick="document.getElementById('StatLesson').style.display='block'">
+                            <div class="card shadow mb-4" id="myButton" data-toggle="modal" data-target="#StatModal">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary" style="text-align:center">Στατιστική</h6>
                                 </div>
@@ -168,7 +259,7 @@
                         <div class="col-lg-6 mb-4">
                             
 
-                            <div class="card shadow mb-4" id="myButton" onclick="document.getElementById('DbLesson').style.display='block'">
+                            <div class="card shadow mb-4" id="myButton" data-toggle="modal" data-target="#DatabaseModal">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary " style="text-align:center">
                                         Βάσεις Δεδομένων
@@ -198,7 +289,7 @@
                         <div class="col-lg-6 mb-4">
 
 
-                            <div class="card shadow mb-4" id="myButton" onclick="document.getElementById('Db2Lesson').style.display='block'">
+                            <div class="card shadow mb-4" id="myButton" data-toggle="modal" data-target="#Database2Modal">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary" style="text-align:center">Συστήματα Διαχείρισης Βάσεων Δεδομένων</h6>
                                 </div>
@@ -220,7 +311,7 @@
                          <div class="col-lg-6 mb-4">
 
 
-                            <div class="card shadow mb-4" id="myButton" onclick="document.getElementById('DataAnalysisLesson').style.display='block'">
+                            <div class="card shadow mb-4" id="myButton" data-toggle="modal" data-target="#DataAnalysisModal">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary" style="text-align:center">
                                         Αναλυτική Δεδομένων
