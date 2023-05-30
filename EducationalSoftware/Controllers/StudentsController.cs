@@ -38,5 +38,10 @@ namespace EducationalSoftware.Controllers
         {
             return View();
         }
+
+        public IActionResult DataScientistQuiz()
+        {
+            return View();
+        }
     }
 }
