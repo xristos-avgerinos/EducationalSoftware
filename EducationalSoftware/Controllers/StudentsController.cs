@@ -43,5 +43,10 @@ namespace EducationalSoftware.Controllers
         {
             return View();
         }
+
+        public IActionResult InsertGrades()
+        {
+            return View();
+        }
     }
 }
