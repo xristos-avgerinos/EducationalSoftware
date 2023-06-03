@@ -1,5 +1,7 @@
 body {
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+    font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    
+}
 
 p {
   color: #b3b3b3;
@@ -37,7 +39,9 @@ a {
     }
   .modal .modal-content .modal-body {
     padding-left: 30px;
-    padding-right: 30px; }
+    padding-right: 30px;
+
+  }
 
 .btn {
   border-radius: 0px !important;
