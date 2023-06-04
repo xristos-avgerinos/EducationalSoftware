@@ -14,7 +14,7 @@
 
     <!-- Custom styles for this template-->
     <link href="css/home/sb-admin-2.min.css" rel="stylesheet">
-    <link href="~/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/modalstyle.css">
     <style>
 
         #myButton {
@@ -47,62 +47,362 @@
             border-bottom: 2px solid #0D76FC; /* Border bottom instead of underline */
             padding-bottom: 2px;
         }
+
+        .center {
+            margin-left: auto;
+            margin-right: auto;
+        }
     </style>
 </head>
 
 <body id="page-top">
 
 
-    <!-- Hidden modal for Human Network Security lesson -->
-    <div id="NetworkSecurityLesson" class="modal">
-        <h1 style="text-align:center;">NetworkSecurityLesson</h1>
-        <br>
-        <div class="center">
-            <span onclick="document.getElementById('NetworkSecurityLesson').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <br />
+    <!-- Hidden modal for  Network Security lesson -->
 
-            <label>Σύμφωνα με τα παραπάνω το ολοκλήρωμα δίνει το εμβαδόν Ε(Ω) του χωρίου Ω που περικλείεται από τη γραφική παράσταση της f τον άξονα xʹx και τις ευθείες x = α και x = β.></label>
+      <div class="modal fade" id="NetworkSecurityLesson" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header py-2 text-center" style="background-color:#f6f6f6;">
+               
+                    <h5 class="modal-title w-100 m-0 font-weight-bold text-primary " style="text-align:center" id="exampleModalCenterTitle">Ασφάλεια Δικτύων</h5>       
+
+                    <button type="button" class="btn-close align-content-end" data-dismiss="modal">
+                    </button>
+                </div>
+                <div class="modal-body" >
+                    <strong >Μαθησιακά Αποτελέσματα</strong>
+                    <br /><br>
+                  
+                    Μετά την επιτυχή παρακολούθηση αυτού του μαθήματος, οι φοιτητές αναμένεται :<br />
+                    1. να έχουν αποκτήσει τις βασικές γνώσεις της Θεωρίας Πιθανοτήτων και της Στατιστικής. <br />
+                    2. να έχουν χτίσει το βασικό υπόβαθρο για περαιτέρω εμβάθυνση στις Πιθανότητες και τη Στατιστική. <br />
+                    3. να αναγνωρίζουν τις τυχαίες κατανομές που περιγράφουν αρκετά τυχαιοκρατικά συστήματα. <br />
+                    4. να επιλέγουν τα κατάλληλα εργαλεία που απαιτούνται για την μελέτη των προαναφερθέντων. <br />
+                    5. να αναγνωρίζουν τις παραμέτρους των κατανομών. <br />
+                    6. να διακρίνουν τα είδη των κατανομών. <br />
+                    7. να εφαρμόζουν μεθοδολογίες Περιγραφικής Στατιστικής για την επεξεργασία των στατιστικών 
+                    δεδομένων. <br />
+                    8. να μπορούν να συσχετίζουν και να μετασχηματίζουν στατιστικά δεδομένα. <br />
+                    9. να οδηγούνται σε στατιστικά συμπεράσματα έχοντας γνώση όλων των προϋποθέσεων. <br />
+                    10. να προβαίνουν σε έλεγχο υποθέσεων αξιοποιώντας τις κατάλληλες ανά ερευνητικό ερώτημα
+                    μεθόδους. <br /><br />
+
+                   
+                        <table class="table table-striped table-bordered center" style="width:70%; text-align:center;" id="DT_load">
+
+                        <thead>
+                            <tr>
+                                <th>
+                                    Hard Skills
+                                </th>
+                                <th>
+                                    Soft Skills
+                                </th>
+                            </tr>
+
+                        </thead>
+
+                        <tr>
+                            <td>
+                                Ανάλυση δεδομένων
+                            </td>
+                            <td>
+                                Κριτική σκέψη
+                            </td> 
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Σχεδιασμός πειραμάτων
+                            </td>
+                            <td>
+                                Προβληματισμός
+                            </td>    
+                        </tr>
+                        <tr>
+                            <td>
+                                Στατιστική μοντελοποίηση
+                            </td>
+                            <td>
+                                Οργανωτικές δεξιότητες
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Αξιολόγηση αβεβαιότητας
+                            </td>
+                            <td>
+                                Επικοινωνία
+                            </td>
+                        </tr>
+                    </table>               
+                   
+                </div>
+                
+            </div>
         </div>
-        <br>
     </div>
 
-    <!-- Hidden modal for Information Systems Security lesson -->
-    <div id="InformationSystemsSecurityLesson" class="modal">
-        <h1 style="text-align:center;">InformationSystemsSecurityLesson</h1>
-        <br>
-        <div class="center">
-            <span onclick="document.getElementById('InformationSystemsSecurityLesson').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <br />
 
-            <label>Σύμφωνα με τα παραπάνω το ολοκλήρωμα δίνει το εμβαδόν Ε(Ω) του χωρίου Ω που περικλείεται από τη γραφική παράσταση της f τον άξονα xʹx και τις ευθείες x = α και x = β.></label>
+    <!-- Hidden modal for Information Systems Security lesson -->
+   
+    <div class="modal fade" id="InformationSystemsSecurityLesson" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header py-2 text-center" style="background-color:#f6f6f6;">
+               
+                    <h5 class="modal-title w-100 m-0 font-weight-bold text-primary " style="text-align:center" id="exampleModalCenterTitle">Ασφάλεια Πληροφοριακών Συστημάτων</h5>
+
+                    <button type="button" class="btn-close align-content-end" data-dismiss="modal">
+                    </button>
+                </div>
+                <div class="modal-body" >
+                    <strong >Μαθησιακά Αποτελέσματα</strong>
+                    <br /><br>
+                  
+                    Μετά την επιτυχή παρακολούθηση αυτού του μαθήματος, οι φοιτητές αναμένεται :<br />
+                    1. να έχουν αποκτήσει τις βασικές γνώσεις της Θεωρίας Πιθανοτήτων και της Στατιστικής. <br />
+                    2. να έχουν χτίσει το βασικό υπόβαθρο για περαιτέρω εμβάθυνση στις Πιθανότητες και τη Στατιστική. <br />
+                    3. να αναγνωρίζουν τις τυχαίες κατανομές που περιγράφουν αρκετά τυχαιοκρατικά συστήματα. <br />
+                    4. να επιλέγουν τα κατάλληλα εργαλεία που απαιτούνται για την μελέτη των προαναφερθέντων. <br />
+                    5. να αναγνωρίζουν τις παραμέτρους των κατανομών. <br />
+                    6. να διακρίνουν τα είδη των κατανομών. <br />
+                    7. να εφαρμόζουν μεθοδολογίες Περιγραφικής Στατιστικής για την επεξεργασία των στατιστικών 
+                    δεδομένων. <br />
+                    8. να μπορούν να συσχετίζουν και να μετασχηματίζουν στατιστικά δεδομένα. <br />
+                    9. να οδηγούνται σε στατιστικά συμπεράσματα έχοντας γνώση όλων των προϋποθέσεων. <br />
+                    10. να προβαίνουν σε έλεγχο υποθέσεων αξιοποιώντας τις κατάλληλες ανά ερευνητικό ερώτημα
+                    μεθόδους. <br /><br />
+
+                   
+                        <table class="table table-striped table-bordered center" style="width:70%; text-align:center;" id="DT_load">
+
+                        <thead>
+                            <tr>
+                                <th>
+                                    Hard Skills
+                                </th>
+                                <th>
+                                    Soft Skills
+                                </th>
+                            </tr>
+
+                        </thead>
+
+                        <tr>
+                            <td>
+                                Ανάλυση δεδομένων
+                            </td>
+                            <td>
+                                Κριτική σκέψη
+                            </td> 
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Σχεδιασμός πειραμάτων
+                            </td>
+                            <td>
+                                Προβληματισμός
+                            </td>    
+                        </tr>
+                        <tr>
+                            <td>
+                                Στατιστική μοντελοποίηση
+                            </td>
+                            <td>
+                                Οργανωτικές δεξιότητες
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Αξιολόγηση αβεβαιότητας
+                            </td>
+                            <td>
+                                Επικοινωνία
+                            </td>
+                        </tr>
+                    </table>
+                  
+                
+                   
+                </div>
+                
+            </div>
         </div>
-        <br>
     </div>
 
     <!-- Hidden modal for Cryptography Lesson -->
-    <div id="CryptographyLesson" class="modal">
-        <h1 style="text-align:center;">CryptographyLesson</h1>
-        <br>
-        <div class="center">
-            <span onclick="document.getElementById('CryptographyLesson').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <br />
+ 
+    <div class="modal fade" id="CryptographyLesson" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header py-2 text-center" style="background-color:#f6f6f6;">
+               
+                    <h5 class="modal-title w-100 m-0 font-weight-bold text-primary " style="text-align:center" id="exampleModalCenterTitle">Κρυπτογραφία</h5>
 
-            <label>Σύμφωνα με τα παραπάνω το ολοκλήρωμα δίνει το εμβαδόν Ε(Ω) του χωρίου Ω που περικλείεται από τη γραφική παράσταση της f τον άξονα xʹx και τις ευθείες x = α και x = β.></label>
+                    <button type="button" class="btn-close align-content-end" data-dismiss="modal">
+                    </button>
+                </div>
+                <div class="modal-body" >
+                    <strong >Μαθησιακά Αποτελέσματα</strong>
+                    <br /><br>
+                  
+                    Μετά την επιτυχή παρακολούθηση αυτού του μαθήματος, οι φοιτητές αναμένεται :<br />
+                    1. να έχουν αποκτήσει τις βασικές γνώσεις της Θεωρίας Πιθανοτήτων και της Στατιστικής. <br />
+                    2. να έχουν χτίσει το βασικό υπόβαθρο για περαιτέρω εμβάθυνση στις Πιθανότητες και τη Στατιστική. <br />
+                    3. να αναγνωρίζουν τις τυχαίες κατανομές που περιγράφουν αρκετά τυχαιοκρατικά συστήματα. <br />
+                    4. να επιλέγουν τα κατάλληλα εργαλεία που απαιτούνται για την μελέτη των προαναφερθέντων. <br />
+                    5. να αναγνωρίζουν τις παραμέτρους των κατανομών. <br />
+                    6. να διακρίνουν τα είδη των κατανομών. <br />
+                    7. να εφαρμόζουν μεθοδολογίες Περιγραφικής Στατιστικής για την επεξεργασία των στατιστικών 
+                    δεδομένων. <br />
+                    8. να μπορούν να συσχετίζουν και να μετασχηματίζουν στατιστικά δεδομένα. <br />
+                    9. να οδηγούνται σε στατιστικά συμπεράσματα έχοντας γνώση όλων των προϋποθέσεων. <br />
+                    10. να προβαίνουν σε έλεγχο υποθέσεων αξιοποιώντας τις κατάλληλες ανά ερευνητικό ερώτημα
+                    μεθόδους. <br /><br />
+
+                   
+                        <table class="table table-striped table-bordered center" style="width:70%; text-align:center;" id="DT_load">
+
+                        <thead>
+                            <tr>
+                                <th>
+                                    Hard Skills
+                                </th>
+                                <th>
+                                    Soft Skills
+                                </th>
+                            </tr>
+
+                        </thead>
+
+                        <tr>
+                            <td>
+                                Ανάλυση δεδομένων
+                            </td>
+                            <td>
+                                Κριτική σκέψη
+                            </td> 
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Σχεδιασμός πειραμάτων
+                            </td>
+                            <td>
+                                Προβληματισμός
+                            </td>    
+                        </tr>
+                        <tr>
+                            <td>
+                                Στατιστική μοντελοποίηση
+                            </td>
+                            <td>
+                                Οργανωτικές δεξιότητες
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Αξιολόγηση αβεβαιότητας
+                            </td>
+                            <td>
+                                Επικοινωνία
+                            </td>
+                        </tr>
+                    </table>
+                  
+                </div>
+                
+            </div>
         </div>
-        <br>
     </div>
 
     <!-- Hidden modal for Code Theory lesson -->
-    <div id="CodeTheoryLesson" class="modal">
-        <h1 style="text-align:center;">CodeTheoryLesson</h1>
-        <br>
-        <div class="center">
-            <span onclick="document.getElementById('CodeTheoryLesson').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <br />
 
-            <label>Σύμφωνα με τα παραπάνω το ολοκλήρωμα δίνει το εμβαδόν Ε(Ω) του χωρίου Ω που περικλείεται από τη γραφική παράσταση της f τον άξονα xʹx και τις ευθείες x = α και x = β.></label>
+    <div class="modal fade" id="CodeTheoryLesson" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header py-2 text-center" style="background-color:#f6f6f6;">
+               
+                    <h5 class="modal-title w-100 m-0 font-weight-bold text-primary " style="text-align:center" id="exampleModalCenterTitle">Θεωρία Πληροφοριών και Κωδίκων</h5>
+
+                    <button type="button" class="btn-close align-content-end" data-dismiss="modal">
+                    </button>
+                </div>
+                <div class="modal-body" >
+                    <strong >Μαθησιακά Αποτελέσματα</strong>
+                    <br /><br>
+                  
+                    Μετά την επιτυχή παρακολούθηση αυτού του μαθήματος, οι φοιτητές αναμένεται :<br />
+                    1. να έχουν αποκτήσει τις βασικές γνώσεις της Θεωρίας Πιθανοτήτων και της Στατιστικής. <br />
+                    2. να έχουν χτίσει το βασικό υπόβαθρο για περαιτέρω εμβάθυνση στις Πιθανότητες και τη Στατιστική. <br />
+                    3. να αναγνωρίζουν τις τυχαίες κατανομές που περιγράφουν αρκετά τυχαιοκρατικά συστήματα. <br />
+                    4. να επιλέγουν τα κατάλληλα εργαλεία που απαιτούνται για την μελέτη των προαναφερθέντων. <br />
+                    5. να αναγνωρίζουν τις παραμέτρους των κατανομών. <br />
+                    6. να διακρίνουν τα είδη των κατανομών. <br />
+                    7. να εφαρμόζουν μεθοδολογίες Περιγραφικής Στατιστικής για την επεξεργασία των στατιστικών 
+                    δεδομένων. <br />
+                    8. να μπορούν να συσχετίζουν και να μετασχηματίζουν στατιστικά δεδομένα. <br />
+                    9. να οδηγούνται σε στατιστικά συμπεράσματα έχοντας γνώση όλων των προϋποθέσεων. <br />
+                    10. να προβαίνουν σε έλεγχο υποθέσεων αξιοποιώντας τις κατάλληλες ανά ερευνητικό ερώτημα
+                    μεθόδους. <br /><br />
+
+                   
+                        <table class="table table-striped table-bordered center" style="width:70%; text-align:center;" id="DT_load">
+
+                        <thead>
+                            <tr>
+                                <th>
+                                    Hard Skills
+                                </th>
+                                <th>
+                                    Soft Skills
+                                </th>
+                            </tr>
+
+                        </thead>
+
+                        <tr>
+                            <td>
+                                Ανάλυση δεδομένων
+                            </td>
+                            <td>
+                                Κριτική σκέψη
+                            </td> 
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Σχεδιασμός πειραμάτων
+                            </td>
+                            <td>
+                                Προβληματισμός
+                            </td>    
+                        </tr>
+                        <tr>
+                            <td>
+                                Στατιστική μοντελοποίηση
+                            </td>
+                            <td>
+                                Οργανωτικές δεξιότητες
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Αξιολόγηση αβεβαιότητας
+                            </td>
+                            <td>
+                                Επικοινωνία
+                            </td>
+                        </tr>
+                    </table>
+          
+                </div>
+                
+            </div>
         </div>
-        <br>
     </div>
 
 
@@ -146,7 +446,7 @@
                         <div class="col-lg-6 mb-4">
 
 
-                            <div class="card shadow mb-4" id="myButton" onclick="document.getElementById('NetworkSecurityLesson').style.display='block'">
+                            <div class="card shadow mb-4" id="myButton" data-toggle="modal" data-target="#NetworkSecurityLesson">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary" style="text-align:center">
                                         Ασφάλεια Δικτύων
@@ -173,7 +473,7 @@
                         <div class="col-lg-6 mb-4">
 
 
-                            <div class="card shadow mb-4" id="myButton" onclick="document.getElementById('InformationSystemsSecurityLesson').style.display='block'">
+                            <div class="card shadow mb-4" id="myButton" data-toggle="modal" data-target="#InformationSystemsSecurityLesson">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary" style="text-align:center">Ασφάλεια Πληροφοριακών Συστημάτων</h6>
                                 </div>
@@ -206,7 +506,7 @@
                         <div class="col-lg-6 mb-4">
 
 
-                            <div class="card shadow mb-4" id="myButton" onclick="document.getElementById('CryptographyLesson').style.display='block'">
+                            <div class="card shadow mb-4" id="myButton" data-toggle="modal" data-target="#CryptographyLesson">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary" style="text-align:center">
                                         Κρυπτογραφία
@@ -232,7 +532,7 @@
                         <div class="col-lg-6 mb-4">
 
 
-                            <div class="card shadow mb-4" id="myButton" onclick="document.getElementById('CodeTheoryLesson').style.display='block'">
+                            <div class="card shadow mb-4" id="myButton" data-toggle="modal" data-target="#CodeTheoryLesson" >
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary " style="text-align:center">
                                         Θεωρία Πληροφοριών και Κωδίκων
