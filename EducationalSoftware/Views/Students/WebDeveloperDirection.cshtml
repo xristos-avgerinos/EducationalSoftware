@@ -1,65 +1,617 @@
-﻿<div class="mx-0 mx-sm-5">
-    <div class="card">
-        <div class="modal-header py-2 text-center " style="background-color:#f3f3f3;">
-            <h5 class="modal-title w-100 m-0 font-weight-bold text-primary " style="text-align:center" >Quiz Μαθήματος Στατιστικής</h5>
-        </div>
-        <div class="card-body">      
+﻿<!DOCTYPE html>
+<html lang="en">
 
-            <form class="px-4" action="">
-                <p class="text-center"><strong>Your rating:</strong></p>
+<head>
 
-                <div class="form-check mb-2">
-                    <input class="form-check-input" type="radio" name="exampleForm" id="radio1Question1" />
-                    <label class="form-check-label" for="radio1Question1">
-                        Very good
-                    </label>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/home/sb-admin-2.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/modalstyle.css">
+    <style>
+
+        #myButton {
+            cursor: pointer;
+        }
+
+            #myButton:hover {
+                background-color: #f6f6f6;
+            }
+
+            #myButton:focus {
+                outline: none;
+            }
+
+        .container {
+            display: flex;
+        }
+
+            .container img {
+                width: 120px; /* adjust the size of the image as needed */
+                height: 120px;
+                margin-right: 20px; /* adjust the spacing between the image and paragraph */
+            }
+
+        .header {
+            font-family: 'Segoe UI';
+            font-style: italic;
+            font-size: 19px;
+            display: inline-block; /* Add display property */
+            border-bottom: 2px solid #0D76FC; /* Border bottom instead of underline */
+            padding-bottom: 2px;
+        }
+
+        .center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body id="page-top">
+
+
+    <!-- Hidden modal for OOP lesson -->
+
+    <div class="modal fade" id="OOPLesson" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header py-2 text-center" style="background-color:#f6f6f6;">
+
+                    <h5 class="modal-title w-100 m-0 font-weight-bold text-primary " style="text-align:center" id="exampleModalCenterTitle">Προγραμματισμός στο Διαδίκτυο και στο Παγκόσμιο Ιστό</h5>
+
+                    <button type="button" class="btn-close align-content-end" data-dismiss="modal">
+                    </button>
                 </div>
-                <div class="form-check mb-2">
-                    <input class="form-check-input" type="radio" name="exampleForm" id="radio2Question1" />
-                    <label class="form-check-label" for="radio2Question1">
-                        Good
-                    </label>
+                <div class="modal-body">
+                    <strong>Μαθησιακά Αποτελέσματα</strong>
+                    <br /><br>
+
+                    Με την ολοκλήρωση του μαθήματος οι φοιτητές/τριες αναμένεται ότι :<br />
+                    1. θα μπορούν να παραθέσουν τις βασικές αρχιτεκτονικές για την ανάπτυξη εφαρμογών στο
+                    διαδίκτυο και στον παγκόσμιο ιστό, όπως είναι οι αρχιτεκτονικές client-server και 3-tier,<br />
+                    2. θα γνωρίζουν τις βασικές τεχνολογίες για το διαδίκτυο και τον παγκόσμιο ιστό όπως είναι
+                    τα πρωτόκολλα IP, TCP, UDP και HTTP, η τεχνολογία sockets, οι διακομιστές ιστού (web
+                    servers) και οι διακομιστές εφαρμογών (application servers),<br />
+                    3. θα μπορούν να αναπτύσσουν εφαρμογές για τον παγκόσμιο ιστό με χρήση κατάλληλου
+                    προγραμματιστικού περιβάλλοντος,<br />
+                    4. θα μπορούν να υλοποιούν προγραμματισμό sockets (TCP sockets και UDP sockets),<br />
+                    5. θα παράγουν εφαρμογές πελάτη-εξυπηρετητή,<br />
+                    6. θα μπορούν να ενσωματώνουν στις εφαρμογές τους την αρχιτεκτονική 3-tier.
+                    <br />
+                    <br /><br />
+
+
+                    <table class="table table-striped table-bordered center" style="width:70%; text-align:center;" id="DT_load">
+
+                        <thead>
+                            <tr>
+                                <th>
+                                    Hard Skills
+                                </th>
+                                <th>
+                                    Soft Skills
+                                </th>
+                            </tr>
+
+                        </thead>
+
+                        <tr>
+                            <td>
+                                Πολυ καλη γνώση σε γλώσσες προγραμματισμού
+                            </td>
+                            <td>
+                                Προαγωγή της ελεύθερης, δημιουργικής και επαγωγικής σκέψης
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Web development frameworks
+                            </td>
+                            <td>
+                                Σχεδιασμός και Διαχείριση έργων
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Ανάπτυξη εφαρμογών
+                            </td>
+                            <td>
+                                Προσαρμογή σε νέες καταστάσεις και συνθήκες
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Διαχερίση Βάσεων Δεδομένων
+                            </td>
+                            <td>
+                                Εργασία σε διεθνές περιβάλλον
+
+                            </td>
+                        </tr>
+                    </table>
+
                 </div>
-                <div class="form-check mb-2">
-                    <input class="form-check-input" type="radio" name="exampleForm" id="radio3Question1" />
-                    <label class="form-check-label" for="radio3Question1">
-                        Medicore
-                    </label>
-                </div>
 
-
-            </form>
- 
-
-            <hr />
-
-            <form class="px-4" action="">
-                <p class="text-center"><strong>Your rating:</strong></p>
-
-                <div class="form-check mb-2">
-                    <input class="form-check-input" type="radio" name="exampleForm" id="radio1Question2" />
-                    <label class="form-check-label" for="radio1Question2">
-                        Very good
-                    </label>
-                </div>
-                <div class="form-check mb-2">
-                    <input class="form-check-input" type="radio" name="exampleForm" id="radio2Question2" />
-                    <label class="form-check-label" for="radio2Question2">
-                        Good
-                    </label>
-                </div>
-                <div class="form-check mb-2">
-                    <input class="form-check-input" type="radio" name="exampleForm" id="radio3Question2" />
-                    <label class="form-check-label" for="radio3Question2">
-                        Medicore
-                    </label>
-                </div>
-
-
-            </form>
-        </div>
-        <div class="card-footer text-end">
-            <button type="button" class="btn btn-primary">Submit</button>
+            </div>
         </div>
     </div>
-</div>
+
+    <!-- Hidden modal for OOP Application Develpoment lesson -->
+
+    <div class="modal fade" id="OOP_ApplicationDevelpomentLesson" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header py-2 text-center" style="background-color:#f6f6f6;">
+
+                    <h5 class="modal-title w-100 m-0 font-weight-bold text-primary " style="text-align:center" id="exampleModalCenterTitle">Τεχνολογίες Διαδικτύου</h5>
+
+                    <button type="button" class="btn-close align-content-end" data-dismiss="modal">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <strong>Μαθησιακά Αποτελέσματα</strong>
+                    <br /><br>
+
+                    Με την επιτυχή ολοκλήρωση του μαθήματος ο φοιτητής / τρια θα είναι σε θέση να:<br />
+                    1. Αναγνωρίζει τις βασικές αρχές των πρωτοκόλλων που στηρίζουν το Διαδίκτυο, με έμφαση στο
+                    IP και το TCP.<br />
+                    2. Έχει κατανοήσει τα βασικά χαρακτηριστικά εφαρμογών του διαδικτύου, τη δομή τους, τους
+                    στόχους τους όπως και τη διασύνδεσή τους.<br />
+                    3. Έχει διακρίνει και εμβαθύνει στις των βασικές τεχνικές και εργαλεία, η αξιοποίηση των οποίων
+                    διασφαλίζει τον προγραμματισμό και τον άρτιο έλεγχο μιας τέτοιας εφαρμογής.<br />
+                    4. Αξιοποιείτις προγραμματιστικές τεχνικές σε συνδυασμό με τη θεωρία του μαθήματος για αποδοτικότερο σχεδιασμό, βελτιστοποίση απόδοσης και λειτουργική/αποτελεσματική δημιουργία
+                    εφαρμογών στο διαδίκτυο.<br />
+                    5. Ααναλύει,συγκρίνει, αξολογεί και προτείνει εναλλακτικές σχετικά με υπάρχουσες διαδικτυακές εφαρμογές και πιθανά προβλήματα απόδοσής τους.και με παραδοσιακές μεθόδους/εργαλεία
+                    <br /><br />
+
+
+                    <table class="table table-striped table-bordered center" style="width:70%; text-align:center;" id="DT_load">
+
+                        <thead>
+                            <tr>
+                                <th>
+                                    Hard Skills
+                                </th>
+                                <th>
+                                    Soft Skills
+                                </th>
+                            </tr>
+
+                        </thead>
+
+                        <tr>
+                            <td>
+                                Ασφαλεια στο Διαδίκτυο 
+                            </td>
+                            <td>
+                                Κριτική σκέψη
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Γλώσσες οπως HTML,CSS,Javascript
+                            </td>
+                            <td>
+                                Προβληματισμός
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Ανάλυση και σχεδίαση εφαρμογών
+                            </td>
+                            <td>
+                                Οργανωτικές δεξιότητες
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Αξιολόγηση και δοκιμή εφαρμογών
+                            </td>
+                            <td>
+                                Επικοινωνία
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Hidden modal for Software Technology lesson -->
+
+    <div class="modal fade" id="SoftTechLesson" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header py-2 text-center" style="background-color:#f6f6f6;">
+
+                    <h5 class="modal-title w-100 m-0 font-weight-bold text-primary " style="text-align:center" id="exampleModalCenterTitle">Τεχνολογία Λογισμικού</h5>
+
+                    <button type="button" class="btn-close align-content-end" data-dismiss="modal">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <strong>Μαθησιακά Αποτελέσματα</strong>
+                    <br /><br>
+
+                    Με την επιτυχή ολοκλήρωση αυτού του μαθήματος ο φοιτητής θα είναι σε θέση να:<br>
+                    1. Συντάσσει δομημένα έγγραφα ανάλυσης απαιτήσεων λογισμικού.<br>
+                    2. Σχεδιάζει αρχιτεκτονικά σχέδια λογισμικού βασισμένα σε γλώσσες μοντελοποίησης και
+                    διαγράμματα.<br>
+                    3. Παράγει κώδικα βασισμένο στο στάδιο του σχεδιασμού, ο οποίος θα ανταποκρίνεται στα
+                    αντίστοιχα διαγράμματα.<br>
+                    4. Χρησιμοποιεί το μοντέλο κύκλου ζωής λογισμικού Rational Unified Process.<br>
+                    <br /><br />
+
+
+                    <table class="table table-striped table-bordered center" style="width:70%; text-align:center;" id="DT_load">
+
+                        <thead>
+                            <tr>
+                                <th>
+                                    Hard Skills
+                                </th>
+                                <th>
+                                    Soft Skills
+                                </th>
+                            </tr>
+
+                        </thead>
+
+                        <tr>
+                            <td>
+                                Γνώση και κατανόηση των μεθοδολογιών ανάπτυξης λογισμικού
+                            </td>
+                            <td>
+                                Κριτική σκέψη
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Σχεδίαση και ανάπτυξη λογισμικού
+                            </td>
+                            <td>
+                                Σχεδιασμός και διαχείριση έργων
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Οργάνωση και διαχείριση έργων λογισμικού
+                            </td>
+                            <td>
+                                Παραγωγή νέων ερευνητικών ιδεών στο συγκεκριμένο πεδίο
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Γλώσσες προγραμματισμού
+                            </td>
+                            <td>
+                                Προσαρμογή σε νέες καταστάσεις
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Hidden modal for Advanced Soft Tech lesson -->
+
+    <div class="modal fade" id="AdvancedSoftTechLesson" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header py-2 text-center" style="background-color:#f6f6f6;">
+
+                    <h5 class="modal-title w-100 m-0 font-weight-bold text-primary " style="text-align:center" id="exampleModalCenterTitle">Σύγχρονα Θέματα Τεχνολογίας Λογισμικού</h5>
+
+                    <button type="button" class="btn-close align-content-end" data-dismiss="modal">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <strong>Μαθησιακά Αποτελέσματα</strong>
+                    <br /><br>
+
+                    Με την επιτυχή ολοκλήρωση αυτού του μαθήματος ο φοιτητής θα είναι σε θέση:<br />
+                    1. Να αναλύει και να συγκρίνει μοντέλα ανάπτυξης λογισμικού.<br />
+                    2. Να επιλέγει μοντέλα ανάπτυξης λογισμικού ανάλογα με τις ανάγκες και να τα χρησιμοποιεί.<br />
+                    3. Να αξιοποιεί το εργαλείο Android Studio για την ανάπτυξη κινητών εφαρμογών.<br />
+                    4. Να αναπτύσσει native mobile apps κάνοντας χρήση του Android SDK.<br />
+                    5. Να εκμεταλλεύεται τοπικές (SQLite) βάσεις δεδομένων.<br />
+                    6. Να γνωρίζει τις πλέον σύγχρονες υπηρεσίες Cloud και Mobile backend as a service που παρέχει
+                    η Firebase.<br />
+                    7. Να τις χρησιμοποιεί πρακτικά.<br />
+                    8. Να σχεδιάζει και να αναπτύσσει εφαρμογές για κινητές και φορητές συσκευές υλοποιώντας τις
+                    πλέον σύγχρονες τεχνικές προγραμματισμού.<br />
+                    9. Να διασφαλίζει την αποτελεσματικότητα των λογισμικών μέσω των προαναφερθέντων εφαρμογών.<br />
+                    <br /><br />
+
+
+                    <table class="table table-striped table-bordered center" style="width:70%; text-align:center;" id="DT_load">
+
+                        <thead>
+                            <tr>
+                                <th>
+                                    Hard Skills
+                                </th>
+                                <th>
+                                    Soft Skills
+                                </th>
+                            </tr>
+
+                        </thead>
+
+                        <tr>
+                            <td>
+                                Κατανόηση των τρεχόντων τάσεων στην τεχνολογία λογισμικού
+                            </td>
+                            <td>
+                                Καινοτομία
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Ανάλυση και κριτική επεξεργασία προβλημάτων λογισμικού
+                            </td>
+                            <td>
+                                Ικανότητα συνεχούς παρακολούθησης των σύγχρονων επιστημονικών τάσεων
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Ανάπτυξη λογισμικού με τις νέες τεχνολογίες
+                            </td>
+                            <td>
+                                Σχεδιασμός και διαχείριση έργων
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Ανάπτυξη ασφαλούς και αξιόπιστου λογισμικού
+                            </td>
+                            <td>
+                                Επικοινωνία
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column" style="background-color:white;">
+
+            <!-- Main Content -->
+            <div id="content" style="background-color:white;">
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center  justify-content-between mb-1">
+                        <h1 class="h2 mb-10 text-gray-800 offset-0">
+                            Προγραμματιστής Web
+                        </h1>
+                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 10rem;"
+                             src="~/img/webdev.webp" alt="...">
+
+                    </div>
+                    <p align="justify" style="font-family:courier;">
+
+
+                        Ένας προγραμματιστής web είναι ένας επαγγελματίας που ασχολείται με τη δημιουργία, την ανάπτυξη και τη συντήρηση ιστοσελίδων και εφαρμογών για τον παγκόσμιο ιστό (World Wide Web). Οι κύριες αρμοδιότητές του περιλαμβάνουν:
+                        <br />
+                        Σχεδίαση ιστοσελίδων: Ο προγραμματιστής web δημιουργεί τη δομή, την εμφάνιση και την αισθητική μιας ιστοσελίδας. Χρησιμοποιεί γλώσσες σήμανσης όπως το HTML για την κατασκευή των στοιχείων της σελίδας και το CSS για την εφαρμογή του σχεδιασμού και την παρουσίαση των στοιχείων.
+                        <br />
+                        Προγραμματισμός: Ο προγραμματιστής web χρησιμοποιεί γλώσσες προγραμματισμού όπως το JavaScript για τη δημιουργία δυναμικών και αλληλεπιδραστικών στοιχείων στην ιστοσελίδα. Αυτό περιλαμβάνει λειτουργίες όπως η επεξεργασία δεδομένων, ο έλεγχος συμπεριφοράς στοιχείων και η επικοινωνία με άλλες υπηρεσίες και API.
+                        <br />
+                        Ανάπτυξη βάσης δεδομένων: Οι περισσότερες ιστοσελίδες απαιτούν αποθήκευση και ανάκτηση δεδομένων. Ο προγραμματιστής web δημιουργεί και διαχειρίζεται βάσεις δεδομένων, συνήθως χρησιμοποιώντας γλώσσες όπως το SQL, για την αποθήκευση και ανάκτηση δεδομένων από τη βάση.
+                        <br />
+                        Βελτιστοποίηση απόδοσης: Ο προγραμματιστής web επιδιώκει να βελτιστοποιήσει την απόδοση της ιστοσελίδας, ώστε να φορτώνεται γρήγορα και να λειτουργεί ομαλά. Αυτό περιλαμβάνει τη βελτιστοποίηση του κώδικα, τη μείωση του χρόνου φόρτωσης, την προσαρμογή για διάφορες συσκευές και τη βελτιστοποίηση των εικόνων και των αρχείων.
+
+
+
+
+                        </p>
+                    <br>
+                    <h4 class="header">Μαθήματα(4)</h4>
+                    <br><br>
+
+                    <!-- First Row -->
+                    <div class="row">
+
+                        <div class="col-lg-6 mb-4">
+
+
+                            <div class="card shadow mb-4" id="myButton" data-toggle="modal" data-target="#OOPLesson">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary" style="text-align:center">
+                                        Προγραμματισμός στο Διαδίκτυο και στο Παγκόσμιο Ιστό
+                                    </h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="container">
+                                        <img src="~/img/OOPLesson.webp" alt="Your Photo">
+                                        <p align="justify">
+
+                                            Το μάθημα "Προγραμματισμός στο Διαδίκτυο και στο Παγκόσμιο Ιστό" προσφέρει στον προγραμματιστή web τις ακόλουθες γνώσεις και δεξιότητες:
+                                            <br />
+                                            Κατανόηση του περιβάλλοντος του Διαδικτύου και του Παγκόσμιου Ιστού: Το μάθημα παρέχει βασικές γνώσεις για το πώς λειτουργεί το Διαδίκτυο και ο Παγκόσμιος Ιστός, συμπεριλαμβανομένων των πρωτοκόλλων, των διακομιστών και των πρωτοκόλλων επικοινωνίας.
+                                            <br />
+                                            Γλώσσες προγραμματισμού για τον web: Το μάθημα εισάγει τον προγραμματιστή web στις γλώσσες προγραμματισμού που χρησιμοποιούνται για την ανάπτυξη ιστοσελίδων και εφαρμογών για τον παγκόσμιο ιστό
+                                            <br />
+                                            Σχεδίαση και ανάπτυξη ιστοσελίδων: Το μάθημα διδάσκει τις βασικές αρχές σχεδίασης και ανάπτυξης ιστοσελίδων.
+
+                                            <br /><br /><br />
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-lg-6 mb-4">
+
+
+                            <div class="card shadow mb-4" id="myButton" data-toggle="modal" data-target="#OOP_ApplicationDevelpomentLesson">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary " style="text-align:center">
+                                        Τεχνολογίες Διαδικτύου
+                                    </h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="container">
+                                        <img src="~/img/OOP_ApplicationDevelpomentLesson.png" alt="Your Photo">
+                                        <p align="justify">
+                                            Το μάθημα "Τεχνολογίες Διαδικτύου" προσφέρει στον προγραμματιστή web :
+                                            <br />
+                                            Προχωρημένες γλώσσες προγραμματισμού: Το μάθημα επεκτείνει την κατανόηση του προγραμματιστή web σε γλώσσες προγραμματισμού. Αυτές οι γλώσσες μπορούν να χρησιμοποιηθούν για την ανάπτυξη πιο πολύπλοκων εφαρμογών και δικτυακών υπηρεσιών.
+                                            <br />
+                                            Πλαίσια ανάπτυξης (frameworks): Το μάθημα εισάγει τον προγραμματιστή web σε δημοφιλή πλαίσια ανάπτυξης. Αυτά τα πλαίσια παρέχουν έτοιμες λύσεις και δομές για την ανάπτυξη ιστοσελίδων και εφαρμογών, επιταχύνοντας την ανάπτυξη και βελτιστοποιώντας την απόδοση.
+                                            <br />
+                                            Ανάπτυξη εφαρμογών για κινητές συσκευές: Το μάθημα επικεντρώνεται στην ανάπτυξη ιστοσελίδων και εφαρμογών που είναι συμβατές και προσαρμοσμένες για κινητές συσκευές, όπως smartphones και tablets.
+                                            <br /><br />
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                    <!-- second Row -->
+                    <div class="row">
+
+
+
+
+                        <div class="col-lg-6 mb-4">
+
+
+                            <div class="card shadow mb-4" id="myButton" data-toggle="modal" data-target="#SoftTechLesson">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary " style="text-align:center">
+                                        Τεχνολογία Λογισμικού
+                                    </h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="container">
+                                        <img src="~/img/SoftTechLesson.png" alt="Your Photo">
+                                        <p align="justify">
+                                            Το μάθημα Τεχνολογία Λογισμικού παρέχει τις βασικές γνώσεις σχετικά με την τεχνολογία που αφορά
+                                            την ανάπτυξη λογισμικού. Από αυτό το μάθημα, ο σχεδιαστής μαθαίνει για τις διάφορες τεχνολογίες που χρησιμοποιούνται στην ανάπτυξη
+                                            λογισμικού, όπως γλώσσες προγραμματισμού, πλατφόρμες ανάπτυξης, βάσεις δεδομένων και άλλα εργαλεία.
+
+                                            Μέσω αυτού του μαθήματος, ο σχεδιαστής εμπειρίας χρηστών αποκτά κατανόηση για τον τρόπο με τον οποίο το λογισμικό αναπτύσσεται
+                                            και λειτουργεί. Μετα την παρακολούθηση αυτού του μαθήματος θα μπορεί να σχεδιάσει και να αναπτύξει ρεαλιστικά και εκτελέσιμα σχέδια
+                                            για βελτιωμένη εμπειρία χρήστη.
+                                            <br />
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 mb-4">
+
+
+                            <div class="card shadow mb-4" id="myButton" data-toggle="modal" data-target="#AdvancedSoftTechLesson">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary " style="text-align:center">
+                                        Σύγχρονα Θέματα Τεχνολογίας Λογισμικού
+                                    </h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="container">
+                                        <img src="~/img/AdvancedSoftTechLesson.png" alt="Your Photo">
+                                        <p align="justify">
+                                            Το μάθημα Τεχνολογία Λογισμικού παρέχει τις βασικές γνώσεις σχετικά με την τεχνολογία που αφορά
+                                            την σύγχρονη ανάπτυξη λογισμικού. Μέσω του μαθήματος, ο μηχανικός λογισμικού θα εξοικειωθεί με νέες τεχνολογίες
+                                            και εργαλεία λογισμικού που αναδύονται, όπως αναπτυξιακά περιβάλλοντα, αυτοματοποίηση διαδικασιών
+                                            και αναλυτικά δεδομένα.
+
+                                            Επιπλέον, το μάθημα αναδεικνύει τη σημασία της συνεχούς μάθησης και της προσαρμογής σε αλλαγές, καθώς η τεχνολογία λογισμικού
+                                            εξελίσσεται με ταχείς ρυθμούς. Ο μηχανικός λογισμικού θα αναπτύξει δεξιότητες αναζήτησης, εκτίμησης και επιλογής νέων τεχνολογιών
+                                            που είναι κατάλληλες για συγκεκριμένα έργα και απαιτήσεις.
+                                            <br />
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+    <br />
+    <br />
+    <br />
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="~/js/home/vendor/jquery/jquery.min.js"></script>
+    <script src="~/js/home/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+    <!-- Page level plugins -->
+    <script src="~/js/home/vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="~/js/home/chart-area-demo.js"></script>
+    <script src="~/js/home/chart-pie-demo.js"></script>
+
+
+
+
+
+
+
+</body>
+
+</html>
+

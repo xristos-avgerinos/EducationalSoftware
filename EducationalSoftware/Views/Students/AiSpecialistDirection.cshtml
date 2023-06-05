@@ -1,5 +1,621 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/home/sb-admin-2.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Style -->
+    <link rel="stylesheet" href="css/modalstyle.css">
+    
+    <style>
+
+        #myButton {
+            cursor: pointer;
+        }
+
+        #myButton:hover {
+            background-color: #f6f6f6;
+        }
+
+        #myButton:focus {
+            outline: none;
+        }
+
+        .container {
+            display: flex;
+            
+        }
+
+        .container img {
+            width: 120px; /* adjust the size of the image as needed */
+            height: 120px;
+            margin-right: 20px; /* adjust the spacing between the image and paragraph */
+        }
+
+        .header {
+            font-family: 'Segoe UI';
+            font-style: italic;
+            font-size:19px;
+            display: inline-block; /* Add display property */
+            border-bottom: 2px solid #0D76FC; /* Border bottom instead of underline */
+            padding-bottom: 2px;
+        }
+
+        .center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+       
+    </style>
+</head>
+
+<body id="page-top">
+
+   
+
+    <!-- Statistics Modal -->
+    <div class="modal fade" id="StatModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header py-2 text-center" style="background-color:#f6f6f6;">
+               
+                    <h5 class="modal-title w-100 m-0 font-weight-bold text-primary " style="text-align:center" id="exampleModalCenterTitle">Πιθανότητες και Στατιστική</h5>
+
+                    <button type="button" class="btn-close align-content-end" data-dismiss="modal">
+                    </button>
+                </div>
+                <div class="modal-body" >
+                    <strong >Μαθησιακά Αποτελέσματα</strong>
+                    <br /><br>
+                  
+                    Μετά την επιτυχή παρακολούθηση αυτού του μαθήματος, οι φοιτητές αναμένεται :<br />
+                    1. να έχουν αποκτήσει τις βασικές γνώσεις της Θεωρίας Πιθανοτήτων και της Στατιστικής. <br />
+                    2. να έχουν χτίσει το βασικό υπόβαθρο για περαιτέρω εμβάθυνση στις Πιθανότητες και τη Στατιστική. <br />
+                    3. να αναγνωρίζουν τις τυχαίες κατανομές που περιγράφουν αρκετά τυχαιοκρατικά συστήματα. <br />
+                    4. να επιλέγουν τα κατάλληλα εργαλεία που απαιτούνται για την μελέτη των προαναφερθέντων. <br />
+                    5. να αναγνωρίζουν τις παραμέτρους των κατανομών. <br />
+                    6. να διακρίνουν τα είδη των κατανομών. <br />
+                    7. να εφαρμόζουν μεθοδολογίες Περιγραφικής Στατιστικής για την επεξεργασία των στατιστικών 
+                    δεδομένων. <br />
+                    8. να μπορούν να συσχετίζουν και να μετασχηματίζουν στατιστικά δεδομένα. <br />
+                    9. να οδηγούνται σε στατιστικά συμπεράσματα έχοντας γνώση όλων των προϋποθέσεων. <br />
+                    10. να προβαίνουν σε έλεγχο υποθέσεων αξιοποιώντας τις κατάλληλες ανά ερευνητικό ερώτημα
+                    μεθόδους. <br /><br />
+
+                   
+                        <table class="table table-striped table-bordered center" style="width:70%; text-align:center;" id="DT_load">
+
+                        <thead>
+                            <tr>
+                                <th>
+                                    Hard Skills
+                                </th>
+                                <th>
+                                    Soft Skills
+                                </th>
+                            </tr>
+
+                        </thead>
+
+                        <tr>
+                            <td>
+                                Ανάλυση δεδομένων
+                            </td>
+                            <td>
+                                Κριτική σκέψη
+                            </td> 
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Σχεδιασμός πειραμάτων
+                            </td>
+                            <td>
+                                Προβληματισμός
+                            </td>    
+                        </tr>
+                        <tr>
+                            <td>
+                                Στατιστική μοντελοποίηση
+                            </td>
+                            <td>
+                                Οργανωτικές δεξιότητες
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Αξιολόγηση αβεβαιότητας
+                            </td>
+                            <td>
+                                Επικοινωνία
+                            </td>
+                        </tr>
+                    </table>
+                  
+                
+                   
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+    
+
+    <!-- Database Modal -->
+    <div class="modal fade" id="DatabaseModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header py-2 text-center" style="background-color:#f6f6f6;">
+
+                    <h5 class="modal-title w-100 m-0 font-weight-bold text-primary " style="text-align:center" id="exampleModalCenterTitle">Τεχνητή Νοημοσύνη και Έμπειρα Συστήματα</h5>
+
+                    <button type="button" class="btn-close align-content-end" data-dismiss="modal">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <strong>Μαθησιακά Αποτελέσματα</strong>
+                    <br /><br />
+                    Με την ολοκλήρωση του μαθήματος οι φοιτητές/τριες αναμένεται ότι :
+                    1. Θα γνωρίζουν τις βασικές έννοιες της Τεχνητής Νοημοσύνης (ΤΝ) και των Έμπειρων Συστημάτων (ΕΣ)<br />
+                    2. Θα μπορούν να αναγνωρίζουν, να περιγράφουν και να αναπαριστούν προβλήματα λογικής<br />
+                    3. Θα αναπτύσσουν αλγόριθμους αναζήτησης λύσης<br />
+                    4. Θα εστιάζουν, θαεμβαθύνουν, θα διακρίνουν και θα καταδεικνύουν τρόπους επίλυσης προβλημάτων με επιλεγμένες μεθόδους τεχνητής νοημοσύνης (πχ. γενετικοί αλγόριθμοι, ασαφή λογική)<br />
+                    5. Θα ελέγχουν και θα διαχειρίζονται με συστηματικό τρόπο την Ασάφεια και την Αβεβαιότητα σε συστήματα κανόνων <br />
+                    6. Θα γνωρίζουν και θα προσδιορίζουν τα σημασιολογικά δίκτυα, καθώς επίσης και θα εφαρμόζουν συμπερασματολογία σε αυτά <br />
+                    7. Θα κατέχουν βασικές γνώσεις στη Μηχανική Μάθηση και στα Νευρωνικά Δίκτυα.
+
+                    <br><br>
+                    <table class="table table-striped table-bordered center" style="width:70%; text-align:center;" id="DT_load">
+
+                        <thead>
+                            <tr>
+                                <th>
+                                    Hard Skills
+                                </th>
+                                <th>
+                                    Soft Skills
+                                </th>
+                            </tr>
+
+                        </thead>
+
+                        <tr>
+                            <td>
+                                Γνώση Προγραμματισμού
+                            </td>
+                            <td>
+                                Κριτική Σκέψη
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Γνώση αλγορίθμων μηχανικής μάθησης 
+                            </td>
+                            <td>
+                                Επικοινωνία 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Γνώση Γραμμικής Αλγεβρας,Στατιστικής
+                            </td>
+                            <td>
+                                Ικανότητα λύσης προβλημάτων 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Νευρωνικά Δίκτυα
+                            </td>
+                            <td>
+                                Συνεργασία
+
+                            </td>
+                        </tr>
+                    </table>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Database2 Modal -->
+    <div class="modal fade" id="Database2Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header py-2 text-center" style="background-color:#f6f6f6;">
+
+                    <h5 class="modal-title w-100 m-0 font-weight-bold text-primary " style="text-align:center" id="exampleModalCenterTitle">Αλγοριθμική και Δομές Δεδομένων</h5>
+
+                    <button type="button" class="btn-close align-content-end" data-dismiss="modal">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <strong >Μαθησιακά Αποτελέσματα</strong>
+                    <br /><br>
+                    Μετά την επιτυχή ολοκλήρωση του μαθήματος, οι φοιτητές:
+                    <br>
+                    
+                    1. Εφαρμόζουν εύστοχα (σκεπτόμενοι αναλυτικά και κριτικά) τις κατάλληλες δομές δεδομένων
+                    για την επίλυση υπολογιστικών προβλημάτων που προκύπτουν στα διάφορα πεδία εφαρμογών.<br>
+                    2. Αποτιμούν τόσο αναλυτικά όσο και πειραματικά το χρόνο εκτέλεσης των βασικών λειτουργιών
+                    μίας δομής δεδομένων.<br>
+                    3.Προσδιορίζουν και να καταδεικνύουν αναλυτικά και πειραματικά την πολυπλοκότητα χώρου
+                    μίας δομής δεδομένων.<br>
+
+
+                    4.Να κατανοούν τη εγγενή δυσκολία ενός αλγοριθμικού προβλήματος..<br>
+                    5. Να διακρίνουν το αλγοριθμικό πρόβλημα στα συστατικά του μέρη..<br>
+                    6. Να σχεδιάζουν και να αναπτύσσουν πιθανές αποτελεσματικές τεχνικές επίλυσης..<br>
+                    7. Να εκτιμούν τόσο αναλυτικά όσο και πειραματικά την ποιότητα λύσης ενός αλγορίθμου.
+
+                    
+
+                    <br><br>
+
+                    <table class="table table-striped table-bordered center" style="width:70%; text-align:center;" id="DT_load">
+
+                        <thead>
+                            <tr>
+                                <th>
+                                    Hard Skills
+                                </th>
+                                <th>
+                                    Soft Skills
+                                </th>
+                            </tr>
+
+                        </thead>
+
+                        <tr>
+                            <td>
+                                Ανάλυση και σχεδίαση αλγορίθμου 
+                            </td>
+                            <td>
+                                Ομαδικό πνεύμα
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Δυναμικός προγραμματισμός
+                            </td>
+                            <td>
+                                Αναλυτική σκέψη
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Οπτικοποίηση δεδομένων
+                            </td>
+                            <td>
+                                Λογική σκέψη
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Γραφήματα
+                            </td>
+                            <td>
+                                Συνεργατικότητα
+
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- DataAnalysis Modal -->
+    <div class="modal fade" id="DataAnalysisModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header py-2 text-center" style="background-color:#f6f6f6;">
+
+                    <h5 class="modal-title w-100 m-0 font-weight-bold text-primary " style="text-align:center;" id="exampleModalCenterTitle">Αναγνώριση Προτύπων</h5>
+
+                    <button type="button" class="btn-close align-content-end" data-dismiss="modal">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <strong>Μαθησιακά Αποτελέσματα</strong>
+                    <br /><br>
+                    Με την επιτυχή́ολοκλήρωση του μαθήματος ο φοιτητής θα είναι σε θέση:<br />
+                    1. Να διαθέτει προχωρημένες γνώσεις σε αλγορίθμους, τεχνικές και μεθοδολογίες αναγνώρισης
+                    προτύπων, σε γραμμικούς και μη γραμμικούς ταξινομητές, σε Νευρωνικά δίκτυα, σε αλγορίθμους ομαδοποίησης και
+                    τεχνικές επιλογής χαρακτηριστικών και μείωσης αριθμού διαστάσεων δεδομένων.<br />
+                    2. Να αντιλαμβάνεται πώς συνδυάζονται γνώσεις πιθανοτήτων, στατιστικής, γραμμικής άλγεβρας
+                    και βελτιστοποίησης για τη δημιουργία αλγορίθμων αναγνώρισης προτύπων.<br />
+                    3. Να διαχειρίζεται τον φόρτο και την πολυπλοκότητα  προβλημάτων πραγματικών δεδομένων σε περιβάλλον ομαδικής εργασίας. <br />
+                    4. Να κατέχει προχωρημένες προγραμματιστικές δεξιότητες σε περιβάλλον ανάπτυξης λογισμικού
+                    Python/MATLAB/GNU 
+                    <br /><br />
+                    <table class="table table-striped table-bordered center" style="width:70%; text-align:center;" id="DT_load">
+
+                        <thead>
+                            <tr>
+                                <th>
+                                    Hard Skills
+                                </th>
+                                <th>
+                                    Soft Skills
+                                </th>
+                            </tr>
+
+                        </thead>
+
+                        <tr>
+                            <td>
+                                Αναλυτικη Δεδομένων
+                            </td>
+                            <td>
+                                Προσαρμογή σε νέες καταστάσεις
+                                
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Μηχανική Μάθηση
+                            </td>
+                            <td>
+                                Λήψη αποφάσεων
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Επεξεργασία Σήματος
+                            </td>
+                            <td>
+                                Αυτόνομη εργασία
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Γνωστική Ψυχολογία
+                            </td>
+                            <td>
+                                Σχεδιασμός και διαχείριση έργων 
+
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+
+    
+
+
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column" style="background-color:white;">
+
+            <!-- Main Content -->
+            <div id="content" style="background-color:white;">
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center  justify-content-between mb-1">
+                        <h1 class="h2 mb-10 text-gray-800 offset-0">
+                            Ειδικός Μηχανικής Μάθησης και Τεχνητής Νοημοσύνης       
+                        </h1>
+                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 10rem;"
+                             src="~/img/machine-learning.png" alt="...">
+                       
+                    </div>
+                    <p align="justify" style="font-family:courier;">
+                        Ο Ειδικός Μηχανικής Μάθησης και Τεχνητής Νοημοσύνης (Machine Learning Engineer and Artificial Intelligence Specialist) είναι ένας επαγγελματίας που απασχολείται με την εφαρμογή τεχνικών για την επίλυση προβλημάτων και την ανάπτυξη εφαρμογών.
+
+                        Η Μηχανική Μάθηση είναι ένας τομέας της τεχνητής νοημοσύνης που ασχολείται με τον σχεδιασμό, την ανάπτυξη και την υλοποίηση αλγορίθμων και μοντέλων που επιτρέπουν στους υπολογιστές να "μαθαίνουν" από δεδομένα και εμπειρία, χωρίς να χρειάζεται να προγραμματιστούν ακριβείς εντολές για κάθε πιθανή κατάσταση.
+                        Οι μηχανικοί μάθησης σχεδιάζουν αλγορίθμους και μοντέλα που μπορούν να αναγνωρίζουν πρότυπα και να προβλέπουν αποτελέσματα με βάση τα δεδομένα που τους παρέχονται.
+
+                        Η Τεχνητή Νοημοσύνη είναι ένας ευρύτερος όρος που αναφέρεται στην ικανότητα των υπολογιστών να εκτελούν καθήκοντα που απαιτούν ανθρώπινη νοημοσύνη.
+                        Οι ειδικοί σε τεχνητή νοημοσύνη ασχολούνται με την ανάπτυξη αλγορίθμων και συστημάτων που μπορούν να αναγνωρίζουν, κατανοούν, αντιλαμβάνονται και αλληλεπιδρούν με την ανθρώπινη γλώσσα, την όραση, τον ήχο και άλλες μορφές ανθρώπινης αντίληψης.
+                        Στόχος τους είναι η δημιουργία υπολογιστικών συστημάτων που μπορούν να πραγματοποιούν πράξεις και να λαμβάνουν αποφάσεις που θα θεωρούνταν νοημοσύνης υψηλού επιπέδου αν εκτελούνταν από άνθρωπο.    
+                    </p>
+                    <br>
+                    <h4 class="header">Μαθήματα(4)</h4>
+                    <br><br>
+                    
+                    <!-- First Row -->
+                    <div class="row">
+
+                        <div class="col-lg-6 mb-4">
+
+
+                            <div class="card shadow mb-4" id="myButton" data-toggle="modal" data-target="#StatModal">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary" style="text-align:center">
+                                        Πιθανότητες και Στατιστική
+                                        </h6>  
+                                </div>
+                                <div class="card-body">
+                                    <div class="container">
+                                        <img src="~/img/statistics_lesson.png" alt="Your Photo">
+                                        <p align="justify">
+                                            Το μάθημα της στατιστικής διδάσκει την ανάλυση δεδομένων, τις αρχές της πιθανότητας και των κατανομών, τις τεχνικές εκτίμησης 
+                                            παραμέτρων και τις στατιστικές δοκιμές. Με την παρακολούθηση του ενας Ειδικός Μηχανικής Μάθησης και Τεχνητής Νοημοσύνης μαθαίνει να εξάγει πληροφορίες,
+                                            να κατανοεί τάσεις και να προβλέπει αποτελέσματα βασιζόμενος σε αναλύσεις και στατιστικά μοντέλα. Επίσης καλύπτει  θέματα όπως 
+                                            αλγόριθμοι επιβλεπόμενης και μη επιβλεπόμενης μάθησης, ανάλυση διαστάσεων και εξόρυξη γνώσης από τα δεδομένα.
+                                            <br /><br />
+                                        </p>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-6 mb-4">
+                            
+
+                            <div class="card shadow mb-4" id="myButton" data-toggle="modal" data-target="#DatabaseModal">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary " style="text-align:center">
+                                        Τεχνητή Νοημοσύνη και Έμπειρα Συστήματα
+                                    </h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="container">
+                                        <img src="~/img/ai.png" alt="Your Photo">
+                                        <p align="justify">
+                                            Το μάθημα "Τεχνητή Νοημοσύνη και Έμπειρα Συστήματα" προσφέρει στον Ειδικό Μηχανικής Μάθησης και Τεχνητής Νοημοσύνης γνώσεις 
+                                            για τις θεωρητικές αρχές της τεχνητής νοημοσύνης και τους βασικούς αλγορίθμους που χρησιμοποιούνται στον τομέα αυτό.
+
+                                            Επίσης, μελετάται η εφαρμογή τεχνικών αναζήτησης και προβληματισμού που επιτρέπουν στο σύστημα να ανακαλύψει αποδοτικούς τρόπους επίλυσης προβλημάτων. 
+                                            Αυτές οι τεχνικές συμπεριλαμβάνουν αναζήτηση σε δέντρα αποφάσεων, αναζήτηση με χρήση ευρετικών, αλγόριθμους αναζήτησης με απόφαση κλπ.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+
+                    </div>
+
+                    <!-- second Row -->
+                    <div class="row">
+
+                        <div class="col-lg-6 mb-4">
+
+
+                            <div class="card shadow mb-4" id="myButton" data-toggle="modal" data-target="#Database2Modal">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary" style="text-align:center">
+                                        Αλγοριθμική και Δομές Δεδομένων
+                                    </h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="container">
+                                        <img src="~/img/alg_and_datstr.png" alt="Your Photo">
+                                        <p align="justify">
+
+                                            Από το μάθημα "Αλγοριθμική και Δομές Δεδομένων", ο Ειδικός Μηχανικής Μάθησης και Τεχνητής Νοημοσύνης μαθαίνει:
+                                            <br />
+                                            Την έννοια και την εφαρμογή των αλγορίθμων, καθώς και πώς να τους σχεδιάζει και να τους αναλύει.
+                                            <br />
+                                            Τις διάφορες δομές δεδομένων που χρησιμοποιούνται για την αποθήκευση και τον οργανισμό των δεδομένων, όπως λίστες, στοίβες, ουρές, δέντρα, γράφους κ.λπ.
+                                            <br />
+                                            Τον τρόπο επιλογής και χρήσης της κατάλληλης δομής δεδομένων για κάθε πρόβλημα που αντιμετωπίζεται.
+                                            <br />
+                                            Τον χρόνο εκτέλεσης και τον χώρο που απαιτεί ο κάθε αλγόριθμος, καθώς και τον τρόπο ανάλυσης της απόδοσής του.
+                                            <br /><br />
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                         <div class="col-lg-6 mb-4">
+
+
+                            <div class="card shadow mb-4" id="myButton" data-toggle="modal" data-target="#DataAnalysisModal">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary" style="text-align:center">
+                                        Αναγνώριση Προτύπων
+
+                                    </h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="container">
+                                        <img src="~/img/pattern.png" alt="Your Photo">
+                                        <p align="justify">
+                                            Από το μάθημα "Αναγνώριση Προτύπων", ο Ειδικός Μηχανικής Μάθησης και Τεχνητής Νοημοσύνης μαθαίνει:
+                                           <br />
+                                            Τις βασικές αρχές και μεθόδους αναγνώρισης προτύπων, που είναι η διαδικασία ανίχνευσης και αναγνώρισης προτύπων ή δομών σε δεδομένα.
+                                            <br />
+                                            Τεχνικές εξόρυξης χαρακτηριστικών, όπως η επιλογή και η μείωση των διαστάσεων των χαρακτηριστικών για την αναπαράσταση των δεδομένων.
+                                            <br />
+                                            Μεθόδους ταξινόμησης και παλινδρόμησης, που χρησιμοποιούνται για την ανάθεση ετικετών ή την πρόβλεψη τιμών βάσει των δεδομένων εκπαίδευσης.
+                                            <br />
+                                            Αλγορίθμους αναγνώρισης προτύπων, όπως οι μηχανές διανυσμάτων υποστήριξης , οι κατανεμημένοι ταξινομητές και άλλες μεθόδους μηχανικής μάθησης.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+    <br />
+
+    <div class=" align-bottom h4 " style="text-align:center">
+        <button class=" alert-success" onclick="window.location.href = '/Students/DataScientistQuiz'">Κάνε το quiz! </button>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="~/js/home/vendor/jquery/jquery.min.js"></script>
+    <script src="~/js/home/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+    <!-- Page level plugins -->
+    <script src="~/js/home/vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="~/js/home/chart-area-demo.js"></script>
+    <script src="~/js/home/chart-pie-demo.js"></script>
+
+
+
+
+
+
+
+</body>
+
+</html>
+
