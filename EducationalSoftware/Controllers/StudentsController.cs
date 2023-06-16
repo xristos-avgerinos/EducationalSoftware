@@ -22,7 +22,7 @@ namespace EducationalSoftware.Controllers
         public IActionResult StudentsLogin()
         {
             HttpContext.Session.Clear();
-            HttpContext.Session.Clear();
+            
             return View();
                       
         }
@@ -53,7 +53,7 @@ namespace EducationalSoftware.Controllers
         {
             if (HttpContext.Session.GetString("username") != null)
             {
-                int x=0;
+                
                 return View();
             }
             else
