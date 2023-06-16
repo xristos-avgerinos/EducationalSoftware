@@ -53,7 +53,7 @@ namespace EducationalSoftware.Controllers
         {
             if (HttpContext.Session.GetString("username") != null)
             {
-                int x=0;
+                int x=5;
                 return View();
             }
             else
