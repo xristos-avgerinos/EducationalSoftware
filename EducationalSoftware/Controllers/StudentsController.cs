@@ -213,6 +213,156 @@ namespace EducationalSoftware.Controllers
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.Any, NoStore = true)]
+        public IActionResult SoftwareEngineerQuiz()
+        {
+            if (HttpContext.Session.GetString("username") != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("StudentsLogin", "Students");
+            }
+        }
+
+        [HttpPost]
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.Any, NoStore = true)]
+        public async Task<IActionResult> SoftwareEngineerQuiz(int score)
+        {
+
+            if (HttpContext.Session.GetString("username") != null)
+            {
+                String username = HttpContext.Session.GetString("username");
+                StudentDirectionQuiz stDirQuiz = new StudentDirectionQuiz();
+                stDirQuiz = _context.StudentDirectionQuizzes.
+                       FirstOrDefault(u => u.Username == username && u.IdDirection == 3);
+
+                stDirQuiz.Score = score;
+                _context.Update(stDirQuiz);
+                _context.SaveChanges();
+                return RedirectToAction("SoftwareEngineerDirection", "Students");
+            }
+            else
+            {
+                return RedirectToAction("StudentsLogin", "Students");
+            }
+        }
+
+        
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.Any, NoStore = true)]
+        public IActionResult UxDesignerQuiz()
+        {
+            if (HttpContext.Session.GetString("username") != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("StudentsLogin", "Students");
+            }
+        }
+
+        [HttpPost]
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.Any, NoStore = true)]
+        public async Task<IActionResult> UxDesignerQuiz(int score)
+        {
+
+            if (HttpContext.Session.GetString("username") != null)
+            {
+                String username = HttpContext.Session.GetString("username");
+                StudentDirectionQuiz stDirQuiz = new StudentDirectionQuiz();
+                stDirQuiz = _context.StudentDirectionQuizzes.
+                       FirstOrDefault(u => u.Username == username && u.IdDirection == 4);
+
+                stDirQuiz.Score = score;
+                _context.Update(stDirQuiz);
+                _context.SaveChanges();
+                return RedirectToAction("UxDesignerDirection", "Students");
+            }
+            else
+            {
+                return RedirectToAction("StudentsLogin", "Students");
+            }
+        }
+
+        
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.Any, NoStore = true)]
+        public IActionResult AiSpecialistQuiz()
+        {
+            if (HttpContext.Session.GetString("username") != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("StudentsLogin", "Students");
+            }
+        }
+
+        [HttpPost]
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.Any, NoStore = true)]
+        public async Task<IActionResult> AiSpecialistQuiz(int score)
+        {
+
+            if (HttpContext.Session.GetString("username") != null)
+            {
+                String username = HttpContext.Session.GetString("username");
+                StudentDirectionQuiz stDirQuiz = new StudentDirectionQuiz();
+                stDirQuiz = _context.StudentDirectionQuizzes.
+                       FirstOrDefault(u => u.Username == username && u.IdDirection == 5);
+
+                stDirQuiz.Score = score;
+                _context.Update(stDirQuiz);
+                _context.SaveChanges();
+                return RedirectToAction("AiSpecialistDirection", "Students");
+            }
+            else
+            {
+                return RedirectToAction("StudentsLogin", "Students");
+            }
+        }
+
+        
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.Any, NoStore = true)]
+        public IActionResult WebDeveloperQuiz()
+        {
+            if (HttpContext.Session.GetString("username") != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("StudentsLogin", "Students");
+            }
+        }
+
+        [HttpPost]
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.Any, NoStore = true)]
+        public async Task<IActionResult> WebDeveloperQuiz(int score)
+        {
+
+            if (HttpContext.Session.GetString("username") != null)
+            {
+                String username = HttpContext.Session.GetString("username");
+                StudentDirectionQuiz stDirQuiz = new StudentDirectionQuiz();
+                stDirQuiz = _context.StudentDirectionQuizzes.
+                       FirstOrDefault(u => u.Username == username && u.IdDirection == 6);
+
+                stDirQuiz.Score = score;
+                _context.Update(stDirQuiz);
+                _context.SaveChanges();
+                return RedirectToAction("WebDeveloperDirection", "Students");
+            }
+            else
+            {
+                return RedirectToAction("StudentsLogin", "Students");
+            }
+        }
+
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.Any, NoStore = true)]
         public async Task<IActionResult> InsertGrades()
         {
             if (HttpContext.Session.GetString("username") != null)
