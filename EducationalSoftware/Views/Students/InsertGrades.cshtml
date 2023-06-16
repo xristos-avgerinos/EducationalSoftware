@@ -1,4 +1,4 @@
-﻿@*@model IEnumerable<GradeSystem.Models.CourseHasStudent>*@
+﻿@model IEnumerable<EducationalSoftware.Models.StudentGrade>
 
 @{
     ViewData["Title"] = "Καταχώρηση Βαθμολογίας";
@@ -77,79 +77,37 @@
                                 </tr>
 
                             </thead>
-@*
+
                             @foreach (var item in Model)
                             {
                                 <tr>
                                     <td>
-                                        @Html.DisplayFor(modelItem => item.Student.Department)
+                                        Πληροφορικής
                                     </td>
                                     <td>
-                                        @Html.DisplayFor(modelItem => item.RegistrationNumber)
-                                    </td>
+                                        @Html.DisplayFor(modelItem => item.IdCourseNavigation.Title)
+                                    </td>                                  
                                     <td>
-                                        @Html.DisplayFor(modelItem => item.Student.Name)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.Student.Surname)
-                                    </td>
-                                    <td>
+                                    @if (item.Grade != null)
+                                    {
+                                        @Html.DisplayFor(modelItem => item.Grade)
+
+                                    }else{
                                         <form method="post" action="InsertGrades" onSubmit="if(!confirm('Είστε σίγουροι οτι θέλετε να υποβάλετε αυτο το βαθμό;')){return false;}">
                                             <input id="grade" required name="grade" form-control-lg type="number" min="0" max="10" placeholder="Εισάγετε Βαθμο" />
 
                                             <input hidden id="SelectedCourseId" name="SelectedCourseId" value="@item.IdCourse">
-                                            <input hidden id="RegNum" name="RegNum" value="@item.RegistrationNumber">
 
                                             <button type="submit" value="submit">Υποβολή Βαθμού</button>
 
                                         </form>
+                                    }
+                                   
                                     </td>
 
 
                                 </tr>
-                            }*@
-
-
-                        <tr>
-                            <td>
-                                Πληροφορικής
-                            </td>
-                            <td>
-                              Στατίστικη
-                            </td>
-                            <td>
-                                <form method="post" action="InsertGrades" onSubmit="if(!confirm('Είστε σίγουροι οτι θέλετε να υποβάλετε αυτο το βαθμό;')){return false;}">
-                                    <input id="grade" required name="grade" form-control-lg type="number" min="0" max="10" placeholder="Εισάγετε Βαθμο" />
-
-                                   @* <input hidden id="SelectedCourseId" name="SelectedCourseId" value="@item.IdCourse">
-                                    <input hidden id="RegNum" name="RegNum" value="@item.RegistrationNumber">*@
-
-                                    <button type="submit" value="submit">Υποβολή Βαθμού</button>
-
-                                </form>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                Πληροφορικής
-                            </td>
-                            <td>
-                                Αντικειμενοστρεφής Προγραμματισμός
-                            </td>
-                            <td>
-                                <form method="post" action="InsertGrades" onSubmit="if(!confirm('Είστε σίγουροι οτι θέλετε να υποβάλετε αυτο το βαθμό;')){return false;}">
-                                    <input id="grade" required name="grade" form-control-lg type="number" min="0" max="10" placeholder="Εισάγετε Βαθμο" />
-
-                                    @* <input hidden id="SelectedCourseId" name="SelectedCourseId" value="@item.IdCourse">
-                                    <input hidden id="RegNum" name="RegNum" value="@item.RegistrationNumber">*@
-
-                                    <button type="submit" value="submit">Υποβολή Βαθμού</button>
-
-                                </form>
-                            </td>
-                        </tr>
-
+                            }
 
                         </table>
                     
