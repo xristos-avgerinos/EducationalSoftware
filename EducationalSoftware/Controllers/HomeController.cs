@@ -15,11 +15,13 @@ namespace EducationalSoftware.Controllers
 
         public IActionResult Index()
         {
+            HttpContext.Session.Clear();
             return View();
         }
 
         public IActionResult Privacy()
         {
+            HttpContext.Session.Clear();
             return View();
         }
 
