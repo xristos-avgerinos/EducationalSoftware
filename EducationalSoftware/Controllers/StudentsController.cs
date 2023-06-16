@@ -22,6 +22,7 @@ namespace EducationalSoftware.Controllers
         public IActionResult StudentsLogin()
         {
             HttpContext.Session.Clear();
+            HttpContext.Session.Clear();
             return View();
                       
         }
