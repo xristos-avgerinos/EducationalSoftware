@@ -1,5 +1,6 @@
 ﻿using EducationalSoftware.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Data;
 using System.Diagnostics;
@@ -195,9 +196,10 @@ namespace EducationalSoftware.Controllers
 
             if (HttpContext.Session.GetString("username") != null)
             {
+                String username = HttpContext.Session.GetString("username");
                 StudentDirectionQuiz stDirQuiz = new StudentDirectionQuiz();
                 stDirQuiz = _context.StudentDirectionQuizzes.
-                       FirstOrDefault(u => u.Username == HttpContext.Session.GetString("username") && u.IdDirection == 2);
+                       FirstOrDefault(u => u.Username == username && u.IdDirection == 2);
 
                 stDirQuiz.Score = score;
                 _context.Update(stDirQuiz);
@@ -211,16 +213,46 @@ namespace EducationalSoftware.Controllers
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.Any, NoStore = true)]
-        public IActionResult InsertGrades()
+        public async Task<IActionResult> InsertGrades()
         {
             if (HttpContext.Session.GetString("username") != null)
             {
-                return View();
+                String username = HttpContext.Session.GetString("username");
+                var StudentLessons = _context.StudentGrades.Include(s => s.IdCourseNavigation).Where(s => s.Username.Equals(username));
+
+
+                return View(await StudentLessons.ToListAsync());
             }
             else
             {
                 return RedirectToAction("StudentsLogin", "Students");
             }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> InsertGrades(int SelectedCourseId, int grade)
+        {
+            if (HttpContext.Session.GetString("username") != null)
+            {
+                String username = HttpContext.Session.GetString("username");          
+
+                StudentGrade studentGrade = new StudentGrade();
+
+                studentGrade = _context.StudentGrades.
+                    FirstOrDefault(u => u.IdCourse == SelectedCourseId && u.Username == username);
+
+                studentGrade.Grade = grade;
+                _context.Update(studentGrade);
+                _context.SaveChanges();
+
+                var StudentLessons = _context.StudentGrades.Include(s => s.IdCourseNavigation).Where(s => s.Username.Equals(username));
+                return View(await StudentLessons.ToListAsync());
+            }
+            else
+            {
+                return RedirectToAction("UsersLogin", "Users");
+            }
+
         }
     }
 }
