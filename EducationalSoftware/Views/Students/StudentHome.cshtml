@@ -30,6 +30,15 @@
                 outline: none;
             }
 
+
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .container button {
+            margin: 0 25px; /* Adjust the margin as needed */
+        }
     </style>
 </head>
 
@@ -60,6 +69,7 @@
                              src="~/img/EpaggelmProsan.png" alt="...">
                     </div>
 
+                  
                     <!-- Content Row -->
                     <div class="row">
 
@@ -152,7 +162,10 @@
                         </div>
                     </div>
 
-
+                    <div class="h4 " style="text-align:center">
+                        <button class="alert-info" onclick="window.location.href = '/Students/InsertGrades'">Καταχώρηση Βαθμών σε Μαθήματα</button>
+                    </div>
+                    <br />
 
                     <!-- First Row -->
                     <div class="row">
@@ -314,12 +327,14 @@
 
     </div>
     <!-- End of Page Wrapper -->
-    <br />
-    <br />
-    <br />
 
-    <div class=" align-bottom h4 " style="text-align:center">
-        <button class=" alert-success" onclick="window.location.href = '/Students/InsertGrades'">Καταχώρηση Βαθμών σε Μαθήματα</button>
+    <div class="container">
+        <div class=" align-bottom h4 " style="text-align:center">
+            <button class=" alert-success" onclick="window.location.href = '/Students/RepeatQuiz'">Επαναληπτικό quiz </button>
+        </div>
+        <div class=" align-bottom h4 " style="text-align:center">
+            <button class=" alert-success" onclick="window.location.href = '/Students/DataScientistQuiz'">Σύσταση </button>
+        </div>
     </div>
 
     <!-- Bootstrap core JavaScript-->

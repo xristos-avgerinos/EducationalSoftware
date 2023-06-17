@@ -6,10 +6,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EducationalSoftware.Models;
 
-[Keyless]
+
 [Table("studentRepeatQuiz")]
 public partial class StudentRepeatQuiz
 {
+    [Key]
     [Column("id")]
     public int Id { get; set; }
 

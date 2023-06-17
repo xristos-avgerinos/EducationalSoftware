@@ -68,6 +68,17 @@ namespace EducationalSoftware.Controllers
         {
             if (HttpContext.Session.GetString("username") != null)
             {
+              
+                String username = HttpContext.Session.GetString("username");
+                StudentDirectionTraffic studentDirTraffic= new StudentDirectionTraffic();
+
+                studentDirTraffic = _context.StudentDirectionTraffics.
+                    FirstOrDefault(u => u.IdDirection == 1 && u.Username == username);
+
+                studentDirTraffic.Traffic+=1;
+                _context.Update(studentDirTraffic);
+                _context.SaveChanges();
+
                 return View();
             }
             else
@@ -81,6 +92,16 @@ namespace EducationalSoftware.Controllers
         {
             if (HttpContext.Session.GetString("username") != null)
             {
+                String username = HttpContext.Session.GetString("username");
+                StudentDirectionTraffic studentDirTraffic = new StudentDirectionTraffic();
+
+                studentDirTraffic = _context.StudentDirectionTraffics.
+                    FirstOrDefault(u => u.IdDirection == 2 && u.Username == username);
+
+                studentDirTraffic.Traffic += 1;
+                _context.Update(studentDirTraffic);
+                _context.SaveChanges();
+
                 return View();
             }
             else
@@ -94,6 +115,16 @@ namespace EducationalSoftware.Controllers
         {
             if (HttpContext.Session.GetString("username") != null)
             {
+                String username = HttpContext.Session.GetString("username");
+                StudentDirectionTraffic studentDirTraffic = new StudentDirectionTraffic();
+
+                studentDirTraffic = _context.StudentDirectionTraffics.
+                    FirstOrDefault(u => u.IdDirection == 3 && u.Username == username);
+
+                studentDirTraffic.Traffic += 1;
+                _context.Update(studentDirTraffic);
+                _context.SaveChanges();
+
                 return View();
             }
             else
@@ -107,6 +138,16 @@ namespace EducationalSoftware.Controllers
         {
             if (HttpContext.Session.GetString("username") != null)
             {
+
+                String username = HttpContext.Session.GetString("username");
+                StudentDirectionTraffic studentDirTraffic = new StudentDirectionTraffic();
+
+                studentDirTraffic = _context.StudentDirectionTraffics.
+                    FirstOrDefault(u => u.IdDirection == 4 && u.Username == username);
+
+                studentDirTraffic.Traffic += 1;
+                _context.Update(studentDirTraffic);
+                _context.SaveChanges();
                 return View();
             }
             else
@@ -120,6 +161,16 @@ namespace EducationalSoftware.Controllers
         {
             if (HttpContext.Session.GetString("username") != null)
             {
+                String username = HttpContext.Session.GetString("username");
+                StudentDirectionTraffic studentDirTraffic = new StudentDirectionTraffic();
+
+                studentDirTraffic = _context.StudentDirectionTraffics.
+                    FirstOrDefault(u => u.IdDirection == 5 && u.Username == username);
+
+                studentDirTraffic.Traffic += 1;
+                _context.Update(studentDirTraffic);
+                _context.SaveChanges();
+
                 return View();
             }
             else
@@ -133,6 +184,16 @@ namespace EducationalSoftware.Controllers
         {
             if (HttpContext.Session.GetString("username") != null)
             {
+                String username = HttpContext.Session.GetString("username");
+                StudentDirectionTraffic studentDirTraffic = new StudentDirectionTraffic();
+
+                studentDirTraffic = _context.StudentDirectionTraffics.
+                    FirstOrDefault(u => u.IdDirection == 6 && u.Username == username);
+
+                studentDirTraffic.Traffic += 1;
+                _context.Update(studentDirTraffic);
+                _context.SaveChanges();
+
                 return View();
             }
             else
@@ -354,6 +415,42 @@ namespace EducationalSoftware.Controllers
                 _context.Update(stDirQuiz);
                 _context.SaveChanges();
                 return RedirectToAction("WebDeveloperDirection", "Students");
+            }
+            else
+            {
+                return RedirectToAction("StudentsLogin", "Students");
+            }
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.Any, NoStore = true)]
+        public IActionResult RepeatQuiz()
+        {
+            if (HttpContext.Session.GetString("username") != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("StudentsLogin", "Students");
+            }
+        }
+
+        [HttpPost]
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.Any, NoStore = true)]
+        public async Task<IActionResult> RepeatQuiz(int score)
+        {
+
+            if (HttpContext.Session.GetString("username") != null)
+            {
+                String username = HttpContext.Session.GetString("username");
+                StudentRepeatQuiz stRepeatQuiz = new StudentRepeatQuiz();
+                stRepeatQuiz = _context.StudentRepeatQuizzes.
+                       FirstOrDefault(u => u.Username == username && u.Id == 1);
+
+                stRepeatQuiz.Score = score;
+                _context.Update(stRepeatQuiz);
+                _context.SaveChanges();
+                return RedirectToAction("StudentHome", "Students");
             }
             else
             {
