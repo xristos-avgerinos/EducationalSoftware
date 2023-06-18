@@ -16,7 +16,38 @@
     <link href="css/home/sb-admin-2.min.css" rel="stylesheet">
 
     <style>
+        .disabled-note {
+            font-size: 13px;
+            color: grey;
+            margin-top: 4px;
+           
+        }
+        .styled-button:disabled {
+            opacity: 0.4; /* Reduce the opacity to make it look disabled */
+            cursor: not-allowed; /* Change the cursor to indicate it's not clickable */
+        }
+        .styled-button {
+            background-color: #4CAF50; /* Set the background color */
+            border: none; /* Remove the border */
+            color: white; /* Set the text color */
+            padding: 10px 20px; /* Set the padding */
+            text-align: center; /* Align the text in the center */
+            text-decoration: none; /* Remove text underline */
+            display: inline-block; /* Display as inline block */
+            font-size: 19px; /* Set the font size */
+            cursor: pointer; /* Change the cursor to a pointer on hover */
+            border-radius: 4px; /* Add rounded corners */
+            transition: background-color 0.3s ease; /* Add a smooth transition effect */
+        }
 
+        .styled-button:hover {
+            background-color: #45a049; /* Change the background color on hover */
+        }
+
+        .completion-icon {
+            margin-left: 5px;
+            color: green;
+        }
         #myButton {
             cursor: pointer;
         }
@@ -59,17 +90,22 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-
+                  
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center  justify-content-between mb-1">
+                     
                         <h1 class="h2 mb-10 text-gray-800 offset-0">
                             Eπαγγελματικός προσανατολισμός φοιτητών και αποφοίτων Τμημάτων Πληροφορικής
                         </h1>
+                       
                         <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 19rem;"
                              src="~/img/EpaggelmProsan.png" alt="...">
                     </div>
 
-                  
+
+                    @{
+                        List<int> completedDirections = ViewBag.completedDirections;
+                    }
                     <!-- Content Row -->
                     <div class="row">
 
@@ -119,9 +155,9 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-m font-weight-bold text-info mb-2">
-                                                Στατιστικο 3:
+                                                Καταχωρημένοι Βαθμοί σε Μαθήματα:
                                             </div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">5/5</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">5/20</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
@@ -141,13 +177,17 @@
                                                 Ποσοστό Ολοκληρωμένων Κατευθύνσεων:
                                             </div>
                                             <div class="row no-gutters align-items-center">
+                                                @{
+                                                    int percentage = (int)((completedDirections.Count / 6.0) * 100);
+                                                }
                                                 <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">68%</div>
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">@percentage%</div>
                                                 </div>
                                                 <div class="col">
                                                     <div class="progress progress-sm mr-2">
+                                                        
                                                         <div class="progress-bar bg-warning" role="progressbar"
-                                                             style="width: 68%" aria-valuenow="68" aria-valuemin="0"
+                                                             style="width: @percentage%" aria-valuenow="@percentage" aria-valuemin="0"
                                                              aria-valuemax="100"></div>
                                                     </div>
                                                 </div>
@@ -167,6 +207,7 @@
                     </div>
                     <br />
 
+                    
                     <!-- First Row -->
                     <div class="row">
 
@@ -175,7 +216,20 @@
 
                             <div class="card shadow mb-4" id="myButton" onclick="window.location.href = '/Students/DataScientistDirection'">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary" style="text-align:center">Ειδικός Ανάλυσης Δεδομένων</h6>
+
+                                    <h6 class="m-0 font-weight-bold text-primary" style="text-align:center">
+                                        Ειδικός Ανάλυσης Δεδομένων
+
+                                        @if (completedDirections.Contains(1))
+                                        {
+                                            <span class="completion-icon">&#10004;</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="completion-icon">&#8987;</span>
+                                        }
+                                     
+                                    </h6>
                                 </div>
                                 <div class="card-body">
                                     <div class="text-center">
@@ -197,7 +251,15 @@
                             <div class="card shadow mb-4" id="myButton" onclick="window.location.href = '/Students/CybersecuritySpecialistDirection'">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary " style="text-align:center">
-                                        Ειδικός Ασφάλειας και Προστασίας Δεδομένων
+                                        Ειδικός Ασφάλειας & Προστασίας Δεδομένων
+                                        @if (completedDirections.Contains(2))
+                                        {
+                                            <span class="completion-icon">&#10004;</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="completion-icon">&#8987;</span>
+                                        }
                                     </h6>
                                 </div>
                                 <div class="card-body">
@@ -222,6 +284,14 @@
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary" style="text-align:center">
                                         Μηχανικός Λογισμικού
+                                        @if (completedDirections.Contains(3))
+                                        {
+                                            <span class="completion-icon">&#10004;</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="completion-icon">&#8987;</span>
+                                        }
                                     </h6>
                                 </div>
                                 <div class="card-body">
@@ -250,7 +320,17 @@
 
                             <div class="card shadow mb-4" id="myButton" onclick="window.location.href = '/Students/UxDesignerDirection'">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary" style="text-align:center">Σχεδιαστής Εμπειρίας Χρηστών</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary" style="text-align:center">
+                                        Σχεδιαστής Εμπειρίας Χρηστών
+                                        @if (completedDirections.Contains(4))
+                                        {
+                                            <span class="completion-icon">&#10004;</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="completion-icon">&#8987;</span>
+                                        }
+                                    </h6>
                                 </div>
                                 <div class="card-body">
                                     <div class="text-center">
@@ -273,6 +353,14 @@
                                 <div class="card-header py-2">
                                     <h6 class="m-0 font-weight-bold text-primary " style="text-align:center">
                                         Ειδικός Μηχανικής Μάθησης και Τεχνητής Νοημοσύνης
+                                        @if (completedDirections.Contains(5))
+                                        {
+                                            <span class="completion-icon">&#10004;</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="completion-icon">&#8987;</span>
+                                        }
                                     </h6>
                                 </div>
                                 <div class="card-body">
@@ -297,6 +385,14 @@
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary" style="text-align:center">
                                         Προγραμματιστής Web
+                                        @if (completedDirections.Contains(6))
+                                        {
+                                            <span class="completion-icon">&#10004;</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="completion-icon">&#8987;</span>
+                                        }
                                     </h6>
                                 </div>
                                 <div class="card-body">
@@ -327,15 +423,33 @@
 
     </div>
     <!-- End of Page Wrapper -->
+    @if (completedDirections.Count == 6)
+    {
+        <div class="container">
+            <div class=" align-bottom h4 " style="text-align:center">
+                <button class=" styled-button" onclick="window.location.href = '/Students/RepeatQuiz'">Επαναληπτικό quiz </button>
+            </div>
+            <div class=" align-bottom h4 " style="text-align:center">
+                <button class=" styled-button" onclick="window.location.href = '/Students/DataScientistQuiz'">Quiz Συστάσεων</button>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="container">
+            <div class=" align-bottom h4 " style="text-align:center">
+                <button disabled class=" styled-button" onclick="window.location.href = '/Students/RepeatQuiz'">Επαναληπτικό quiz </button>
+            </div>
+            <div class=" align-bottom h4 " style="text-align:center">
+                <button disabled class=" styled-button" onclick="window.location.href = '/Students/DataScientistQuiz'">Quiz Συστάσεων</button>
+            </div>
+          
 
-    <div class="container">
-        <div class=" align-bottom h4 " style="text-align:center">
-            <button class=" alert-success" onclick="window.location.href = '/Students/RepeatQuiz'">Επαναληπτικό quiz </button>
         </div>
-        <div class=" align-bottom h4 " style="text-align:center">
-            <button class=" alert-success" onclick="window.location.href = '/Students/DataScientistQuiz'">Σύσταση </button>
-        </div>
-    </div>
+        <p style="text-align:center" class="disabled-note">Αυτές οι δυνατότηες θα ξεκλειδωθούν οταν ολοκληρωθούν τα quiz όλων των κατευθύνσεων</p>
+      
+    }
+   
 
     <!-- Bootstrap core JavaScript-->
     <script src="~/js/home/vendor/jquery/jquery.min.js"></script>

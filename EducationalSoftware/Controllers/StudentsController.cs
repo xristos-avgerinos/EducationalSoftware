@@ -54,7 +54,14 @@ namespace EducationalSoftware.Controllers
         {
             if (HttpContext.Session.GetString("username") != null)
             {
-                
+                String username = HttpContext.Session.GetString("username");
+                StudentDirectionQuiz studentDirQuiz = new StudentDirectionQuiz();
+
+                var completedDirections = _context.StudentDirectionQuizzes.
+                    Where(u => u.Username == username && u.Score != null).Select(s=>s.IdDirection);
+
+                ViewBag.completedDirections = completedDirections.ToList();
+
                 return View();
             }
             else
@@ -497,9 +504,14 @@ namespace EducationalSoftware.Controllers
             }
             else
             {
-                return RedirectToAction("UsersLogin", "Users");
+                return RedirectToAction("StudentsLogin", "Students");
             }
 
+        }
+
+        public IActionResult Logout()
+        {
+            return RedirectToAction("StudentsLogin", "Students");
         }
     }
 }
