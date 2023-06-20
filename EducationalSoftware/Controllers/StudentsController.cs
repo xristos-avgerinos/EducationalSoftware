@@ -23,9 +23,9 @@ namespace EducationalSoftware.Controllers
         public IActionResult StudentsLogin()
         {
             HttpContext.Session.Clear();
-            
+
             return View();
-                      
+
         }
 
         [HttpPost]
@@ -58,7 +58,7 @@ namespace EducationalSoftware.Controllers
                 StudentDirectionQuiz studentDirQuiz = new StudentDirectionQuiz();
 
                 var completedDirections = _context.StudentDirectionQuizzes.
-                    Where(u => u.Username == username && u.Score != null).Select(s=>s.IdDirection);
+                    Where(u => u.Username == username && u.Score != null).Select(s => s.IdDirection);
 
                 ViewBag.completedDirections = completedDirections.ToList();
 
@@ -75,14 +75,14 @@ namespace EducationalSoftware.Controllers
         {
             if (HttpContext.Session.GetString("username") != null)
             {
-              
+
                 String username = HttpContext.Session.GetString("username");
-                StudentDirectionTraffic studentDirTraffic= new StudentDirectionTraffic();
+                StudentDirectionTraffic studentDirTraffic = new StudentDirectionTraffic();
 
                 studentDirTraffic = _context.StudentDirectionTraffics.
                     FirstOrDefault(u => u.IdDirection == 1 && u.Username == username);
 
-                studentDirTraffic.Traffic+=1;
+                studentDirTraffic.Traffic += 1;
                 _context.Update(studentDirTraffic);
                 _context.SaveChanges();
 
@@ -243,7 +243,7 @@ namespace EducationalSoftware.Controllers
                 return RedirectToAction("StudentsLogin", "Students");
             }
         }
-        
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.Any, NoStore = true)]
         public IActionResult CyberSecurityQuiz()
         {
@@ -316,7 +316,7 @@ namespace EducationalSoftware.Controllers
             }
         }
 
-        
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.Any, NoStore = true)]
         public IActionResult UxDesignerQuiz()
@@ -354,7 +354,7 @@ namespace EducationalSoftware.Controllers
             }
         }
 
-        
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.Any, NoStore = true)]
         public IActionResult AiSpecialistQuiz()
@@ -392,7 +392,7 @@ namespace EducationalSoftware.Controllers
             }
         }
 
-        
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.Any, NoStore = true)]
         public IActionResult WebDeveloperQuiz()
         {
@@ -488,7 +488,7 @@ namespace EducationalSoftware.Controllers
         {
             if (HttpContext.Session.GetString("username") != null)
             {
-                String username = HttpContext.Session.GetString("username");          
+                String username = HttpContext.Session.GetString("username");
 
                 StudentGrade studentGrade = new StudentGrade();
 
@@ -509,6 +509,52 @@ namespace EducationalSoftware.Controllers
 
         }
 
+
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.Any, NoStore = true)]
+        public IActionResult RecommendationQuiz()
+        {
+            if (HttpContext.Session.GetString("username") != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("StudentsLogin", "Students");
+            }
+        }
+
+        [HttpPost]
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.Any, NoStore = true)]
+        public async Task<IActionResult> RecommendationQuiz(int Dir1score, int Dir2score, int Dir3score, int Dir4score, int Dir5score, int Dir6score)
+        {
+
+            if (HttpContext.Session.GetString("username") != null)
+            {
+                String username = HttpContext.Session.GetString("username");
+                int[] DirScores = { Dir1score , Dir2score , Dir3score , Dir4score , Dir5score , Dir6score };
+
+                for (int i = 0; i < 6; i++) {
+
+                    StudentRecommendationQuiz stRecommendationDIRi = new StudentRecommendationQuiz();
+                    stRecommendationDIRi = _context.StudentRecommendationQuizzes.
+                           FirstOrDefault(u => u.Username == username && u.IdDirection == i+1);
+
+                    stRecommendationDIRi.Score = DirScores[i];
+                    _context.Update(stRecommendationDIRi);
+                    _context.SaveChanges();
+
+                }
+
+               
+                return RedirectToAction("StudentHome", "Students");
+            }
+            else
+            {
+                return RedirectToAction("StudentsLogin", "Students");
+            }
+        } 
+     
         public IActionResult Logout()
         {
             return RedirectToAction("StudentsLogin", "Students");

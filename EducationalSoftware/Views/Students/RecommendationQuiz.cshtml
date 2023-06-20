@@ -1,0 +1,721 @@
+﻿<style>
+    #result-container {
+        display: flex;
+        justify-content: center;
+    }
+
+
+hidden-header {
+        display: none;
+        font-weight: bold;
+        font-size:20px;
+        color: black;
+        padding: 5px;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+</style>
+
+<div class="mx-0 mx-sm-5">
+    <div class="card">
+        <div class="modal-header py-2 text-center " style="background-color:#f3f3f3;">
+            <h5 class="modal-title w-100 m-0 font-weight-bold text-primary " style="text-align:center">Quiz Προτιμήσεων</h5>
+        </div>
+        <div class="card-body">
+
+
+            <form class="px-4" action="">
+                <p>
+                    <strong>
+                        Ποιες είναι οι δεξιότητες που θεωρείτε ότι έχετε αναπτύξει περισσότερο;
+                    </strong>
+                </p>
+
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm1" id="10" />
+                    <label class="form-check-label" for="10">
+                        Ανάλυση δεδομένων
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm1" id="11" />
+                    <label class="form-check-label" for="11">
+                        Ασφάλεια και προστασία δεδομένων
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm1" id="12" />
+                    <label class="form-check-label" for="12">
+                        Ανάπτυξη λογισμικού
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm1" id="13" />
+                    <label class="form-check-label" for="13">
+                        Σχεδίαση εμπειρίας χρήστη
+                    </label>
+                </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm1" id="14" />
+                    <label class="form-check-label" for="14">
+                        Μηχανική μάθηση και τεχνητή νοημοσύνη
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm1" id="15" />
+                    <label class="form-check-label" for="15">
+                        Ανάπτυξη ιστοσελίδων
+                    </label>
+                </div>
+
+            </form>
+
+
+            <hr />
+
+            <form class="px-4" action="">
+                <p>
+                    <strong> Ποια είναι η προηγούμενη εμπειρία σας στον τομέα της πληροφορικής;</strong>
+                </p>
+
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm2" id="20" />
+                    <label class="form-check-label" for="20">
+                        Έχω πάρει πτυχίο στον τομεα της πληροφορικής και έχω εργαστεί σε μια εταιρεία ανάπτυξης λογισμικού.
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm2" id="21" />
+                    <label class="form-check-label" for="21">
+                        Έχω συμμετάσχει σε έρευνες και έχω δημοσιεύσει άρθρα σε συνέδρια σχετικά με την τεχνητή νοημοσύνη.
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm2" id="22" />
+                    <label class="form-check-label" for="22">
+                        Έχω αποκτήσει εμπειρία σε διαχείριση βάσεων δεδομένων κατά τη διάρκεια της πρακτικής μου άσκησης.
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm2" id="23" />
+                    <label class="form-check-label" for="23">
+                        Τίποτα από τα παραπάνω
+                    </label>
+                </div>
+
+            </form>
+
+
+            <hr />
+
+            <form class="px-4" action="">
+                <p>
+                    <strong>
+                        Ποιο τύπο μεταπτυχιακού προγράμματος προτιμάτε;
+                    </strong>
+                </p>
+
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm3" id="30" />
+                    <label class="form-check-label" for="30">
+                        Ερευνητικό με έμφαση στη θεωρία.
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm3" id="30" />
+                    <label class="form-check-label" for="30">
+                        Ερευνητικό με έμφαση στην πρακτική εφαρμογή
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm3" id="32" />
+                    <label class="form-check-label" for="32">
+                        Εφαρμοσμένο με επίκεντρο στην απόκτηση δεξιοτήτων
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm3" id="33" />
+                    <label class="form-check-label" for="33">
+                        Μεικτό, συνδυάζοντας θεωρία και εφαρμογή
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm3" id="34" />
+                    <label class="form-check-label" for="34">
+                        Δεν έχω αποφασίσει ακόμη
+                    </label>
+                </div>
+
+            </form>
+
+            <hr />
+
+            <form class="px-4" action="">
+                <p>
+                    <strong> Ποια προγραμματιστική γλώσσα ή τεχνολογία έχετε εργαστεί περισσότερο;</strong>
+                </p>
+
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm4" id="40" />
+                    <label class="form-check-label" for="40">
+                        Java
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm4" id="41" />
+                    <label class="form-check-label" for="41">
+                        C#
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm4" id="42" />
+                    <label class="form-check-label" for="42">
+                        Python
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm4" id="43" />
+                    <label class="form-check-label" for="43">
+                        JavaScript και HTML
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm4" id="44" />
+                    <label class="form-check-label" for="44">
+                       Prolog
+                    </label>
+                </div>
+
+     
+            </form>
+
+            <hr />
+
+           
+            <form class="px-4" action="">
+                <p><strong>Ποιες από τις παρακάτω θέσεις εργασίας σας ενδιαφέρουν περισσότερο; </strong></p>
+
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm5" id="50" />
+                    <label class="form-check-label" for="50">
+                        Να προγραμματίζω λογισμικο, εφαρμογές για κινητά και ιστότοπους
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm5" id="51" />
+                    <label class="form-check-label" for="51">
+                        Να αναλύω δεδομένα και να παρουσίαζω ευρήματα
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm5" id="52" />
+                    <label class="form-check-label" for="52">
+                        Να προστατεύω τον κυβερνοχώρο απο απειλές
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm5" id="53" />
+                    <label class="form-check-label" for="53">
+                        Να χρησιμοποιώ τα καλλιτεχνικά μου ταλέντα
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm5" id="54" />
+                    <label class="form-check-label" for="54">
+                        Να ασχολούμαι με τη σχεδίαση και την υλοποίηση υπολογιστικών συστημάτων που μιμούνται στοιχεία της ανθρώπινης συμπεριφοράς.
+                    </label>
+                </div>
+
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm5" id="55" />
+                    <label class="form-check-label" for="55">
+                        Δεν ειμαι σίγουρος
+                    </label>
+                </div>
+
+            </form>
+
+
+            <hr />
+
+            <form class="px-4" action="">
+                <p>
+                    <strong> Σας ενδιαφέρει να μάθετε πολλές γλώσσες προγραμματισμού; </strong>
+                </p>
+
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm6" id="60" />
+                    <label class="form-check-label" for="60">
+                        Πολυ ενδιαφέρον
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm6" id="61" />
+                    <label class="form-check-label" for="61">
+                        Ενδιαφέρον
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm6" id="62" />
+                    <label class="form-check-label" for="62">
+                        Ελαφρώς ενδιαφέρον
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm6" id="63" />
+                    <label class="form-check-label" for="63">
+                       Καθόλου ενδιαφέρον
+                    </label>
+                </div>
+
+            </form>
+
+            <hr />
+
+            <form class="px-4" action="">
+                <p><strong> Σας ενδιαφέρουν οι τεχνικές ανάλυσης και διαχείρησης δεδομένων σε πραγματικά προβλήματα και περιβάλλοντα;</strong></p>
+
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm7" id="70" />
+                    <label class="form-check-label" for="70">
+                        Πολυ ενδιαφέρον
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm7" id="71" />
+                    <label class="form-check-label" for="71">
+                         Ενδιαφέρον 
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm7" id="72" />
+                    <label class="form-check-label" for="72">
+                        Ελαφρώς ενδιαφέρον
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm7" id="73" />
+                    <label class="form-check-label" for="73">
+                        Καθόλου ενδιαφέρον
+                    </label>
+                </div>  
+
+            </form>
+
+
+            <hr />
+
+            <form class="px-4" action="">
+                <p>
+                    <strong> Σας ενδιαφέρει να διατηρήσετε τα συστήματα ηλεκτρονικών υπολογιστών μιας επιχείρησης ασφαλή και προστατευμένα;  </strong>
+                </p>
+
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm8" id="80" />
+                    <label class="form-check-label" for="80">
+                        Πολυ ενδιαφέρον
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm8" id="81" />
+                    <label class="form-check-label" for="81">
+                        Ενδιαφέρον
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm8" id="82" />
+                    <label class="form-check-label" for="82">
+                        Ελαφρώς ενδιαφέρον
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm8" id="83" />
+                    <label class="form-check-label" for="83">
+                        Καθόλου ενδιαφέρον
+                    </label>
+                </div>
+
+            </form>
+
+             <hr />
+
+            <form class="px-4" action="">
+                <p><strong>Σας ενδιαφέρει η αντιμετώπιση προβλημάτων κώδικα λογισμικού. </strong></p>
+
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm9" id="90" />
+                    <label class="form-check-label" for="90">
+                        Πολυ ενδιαφέρον
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm9" id="91" />
+                    <label class="form-check-label" for="91">
+                        Ενδιαφέρον
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm9" id="92" />
+                    <label class="form-check-label" for="92">
+                        Ελαφρώς ενδιαφέρον
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm9" id="93" />
+                    <label class="form-check-label" for="93">
+                        Καθόλου ενδιαφέρον
+                    </label>
+                </div>
+
+            </form>
+
+
+            <hr />
+
+            <form class="px-4" action="">
+                <p>
+                    <strong> Σας ενδιαφέρει η σχεδίαση ενος περιβάλλοντος και ο τρόπος που αυτο αλληλεπιδρά με τον χρήστη; </strong>
+                </p>
+
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm10" id="100" />
+                    <label class="form-check-label" for="100">
+                        Πολυ ενδιαφέρον
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm10" id="101" />
+                    <label class="form-check-label" for="101">
+                        Ενδιαφέρον
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm10" id="102" />
+                    <label class="form-check-label" for="102">
+                        Ελαφρώς ενδιαφέρον
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm10" id="103" />
+                    <label class="form-check-label" for="103">
+                        Καθόλου ενδιαφέρον
+                    </label>
+                </div>
+
+               
+            </form>
+
+            <hr />
+
+            <form class="px-4" action="">
+                <p><strong>Σας αρέσει η ραγδαία ανάπτυξη της τεχνητής νοημοσύνης και το πως αυτή επηρεάζει την καθημερινή μας ζωη; </strong></p>
+
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm11" id="110" />
+                    <label class="form-check-label" for="110">
+                        Παρα πολύ
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm11" id="111" />
+                    <label class="form-check-label" for="111">
+                        Πολύ
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm11" id="112" />
+                    <label class="form-check-label" for="112">
+                       Λίγο
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm11" id="113" />
+                    <label class="form-check-label" for="113">
+                       Καθόλου
+                    </label>
+                </div>
+
+            </form>
+
+
+            <hr />
+
+            <form class="px-4" action="">
+                <p>
+                    <strong> Σας αρέσει ο συνδυασμός front-end και back-end development για την ανάπτυξη μιας ιστοσελίδας; </strong>
+                </p>
+
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm12" id="120" />
+                    <label class="form-check-label" for="120">
+                        Παρα πολύ
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm12" id="121" />
+                    <label class="form-check-label" for="121">
+                        Πολύ
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm12" id="122" />
+                    <label class="form-check-label" for="122">
+                        Λίγο
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="exampleForm12" id="123" />
+                    <label class="form-check-label" for="123">
+                        Καθόλου
+                    </label>
+                </div>
+
+            </form>
+
+        </div>
+        <div class="card-footer text-center">
+            <button type="button" id="hide-button" class="btn btn-primary" onclick="submitForm()">Υποβολή Απαντήσεων</button>
+
+            <form action="RecommendationQuiz" method="post">
+                <div class=" align-bottom h4 " style="text-align:center">
+                    <input hidden id="Dir1score" name="Dir1score">
+                    <input hidden id="Dir2score" name="Dir2score">
+                    <input hidden id="Dir3score" name="Dir3score">
+                    <input hidden id="Dir4score" name="Dir4score">
+                    <input hidden id="Dir5score" name="Dir5score">
+                    <input hidden id="Dir6score" name="Dir6score">
+                    <button id="hiddenButtonProceed" style="display: none;" class=" alert-info" onClick="submitForm()">Συνέχεια</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+<script>
+    function hideButton() {
+        var button = document.getElementById('hide-button');
+        button.classList.add('hidden');
+    }
+    function showHiddenHeader(perc) {
+        var header = document.getElementById('hidden-header');
+        header.innerHTML = perc + "%";
+        header.style.backgroundColor = "lightblue";
+        header.style.display = 'block';
+        
+    }
+    function disableAllRadioButtons() {
+        var radioButtons = document.querySelectorAll('input[type="radio"]');
+        for (var i = 0; i < radioButtons.length; i++) {
+            radioButtons[i].disabled = true;
+        }
+    }
+
+    function submitForm() {
+        // Retrieve selected answer
+        var selectedOptionQuestion1 = document.querySelector('input[name="exampleForm1"]:checked');
+        var selectedOptionQuestion2 = document.querySelector('input[name="exampleForm2"]:checked');
+        var selectedOptionQuestion3 = document.querySelector('input[name="exampleForm3"]:checked');
+        var selectedOptionQuestion4 = document.querySelector('input[name="exampleForm4"]:checked');
+        var selectedOptionQuestion5 = document.querySelector('input[name="exampleForm5"]:checked');
+        var selectedOptionQuestion6 = document.querySelector('input[name="exampleForm6"]:checked');
+        var selectedOptionQuestion7 = document.querySelector('input[name="exampleForm7"]:checked');
+        var selectedOptionQuestion8 = document.querySelector('input[name="exampleForm8"]:checked');
+        var selectedOptionQuestion9 = document.querySelector('input[name="exampleForm9"]:checked');
+        var selectedOptionQuestion10 = document.querySelector('input[name="exampleForm10"]:checked');
+        var selectedOptionQuestion11 = document.querySelector('input[name="exampleForm11"]:checked');
+        var selectedOptionQuestion12 = document.querySelector('input[name="exampleForm12"]:checked');
+
+        // Check if an option is selected
+        if (!selectedOptionQuestion1 || !selectedOptionQuestion2 || !selectedOptionQuestion3 || !selectedOptionQuestion4 || !selectedOptionQuestion5 || !selectedOptionQuestion6 || !selectedOptionQuestion7 || !selectedOptionQuestion8 || !selectedOptionQuestion9 || !selectedOptionQuestion10 || !selectedOptionQuestion11 || !selectedOptionQuestion12) {
+           
+            alert("Παρακαλώ απαντήστε σε όλες τις ερωτήσεις");
+            
+        }else {
+            var selectedValueQuestion1 = selectedOptionQuestion1.id;
+            var selectedValueQuestion2 = selectedOptionQuestion2.id;
+            var selectedValueQuestion3 = selectedOptionQuestion3.id;
+            var selectedValueQuestion4 = selectedOptionQuestion4.id;
+            var selectedValueQuestion5 = selectedOptionQuestion5.id;
+            var selectedValueQuestion6 = selectedOptionQuestion6.id;
+            var selectedValueQuestion7 = selectedOptionQuestion7.id;
+            var selectedValueQuestion8 = selectedOptionQuestion8.id;
+            var selectedValueQuestion9 = selectedOptionQuestion9.id;
+            var selectedValueQuestion10 = selectedOptionQuestion10.id;
+            var selectedValueQuestion11 = selectedOptionQuestion11.id;
+            var selectedValueQuestion12 = selectedOptionQuestion12.id;
+
+            var selectedValueQuestion1 = parseInt(selectedValueQuestion1.charAt(selectedValueQuestion1.length - 1));
+            var selectedValueQuestion2 = parseInt(selectedValueQuestion2.charAt(selectedValueQuestion2.length - 1));
+            var selectedValueQuestion3 = parseInt(selectedValueQuestion3.charAt(selectedValueQuestion3.length - 1));
+            var selectedValueQuestion4 = parseInt(selectedValueQuestion4.charAt(selectedValueQuestion4.length - 1));
+            var selectedValueQuestion5 = parseInt(selectedValueQuestion5.charAt(selectedValueQuestion5.length - 1));
+            var selectedValueQuestion6 = parseInt(selectedValueQuestion6.charAt(selectedValueQuestion6.length - 1));
+            var selectedValueQuestion7 = parseInt(selectedValueQuestion7.charAt(selectedValueQuestion7.length - 1));
+            var selectedValueQuestion8 = parseInt(selectedValueQuestion8.charAt(selectedValueQuestion8.length - 1));
+            var selectedValueQuestion9 = parseInt(selectedValueQuestion9.charAt(selectedValueQuestion9.length - 1));
+            var selectedValueQuestion10 = parseInt(selectedValueQuestion10.charAt(selectedValueQuestion10.length - 1));
+            var selectedValueQuestion11 = parseInt(selectedValueQuestion11.charAt(selectedValueQuestion11.length - 1));
+            var selectedValueQuestion12 = parseInt(selectedValueQuestion12.charAt(selectedValueQuestion12.length - 1));
+            
+            
+
+            let selectedanswers = [selectedValueQuestion1, selectedValueQuestion2, selectedValueQuestion3, selectedValueQuestion4, selectedValueQuestion5, selectedValueQuestion6, selectedValueQuestion7,
+                selectedValueQuestion8, selectedValueQuestion9, selectedValueQuestion10, selectedValueQuestion11, selectedValueQuestion12];
+
+            let rows = 6;
+            let cols = 6;
+            let array = new Array(rows);
+            for (let i = 0; i < rows; i++) {
+                array[i] = new Array(cols);
+            }
+
+            // 1 question
+            array[0][0] = [1];
+            array[0][1] = [2];
+            array[0][2] = [3];
+            array[0][3] = [4];
+            array[0][4] = [5];
+            array[0][5] = [6];
+
+            // 2 question
+            array[1][0] = [3, 6];
+            array[1][1] = [5];
+            array[1][2] = [1];
+            array[1][3] = [];
+
+            // 3 question
+            array[2][0] = [1, 4];
+            array[2][1] = [2, 3, 5, 6];
+            array[2][2] = [1, 2];
+            array[2][3] = [1, 2, 3, 4, 5, 6];
+            array[2][4] = [];
+
+            // 4 question
+            array[3][0] = [3, 6];
+            array[3][1] = [3, 6];
+            array[3][2] = [1, 2];
+            array[3][3] = [4, 6];
+            array[3][4] = [5];
+
+            // 5 question
+            array[4][0] = [3, 6];
+            array[4][1] = [1];
+            array[4][2] = [2];
+            array[4][3] = [4];
+            array[4][4] = [5];
+            array[4][5] = [];
+
+            // 6 question
+            array[5][0] = [3, 6];
+            array[5][1] = [2, 4];
+            array[5][2] = [5, 1];
+            array[5][3] = [];
+
+            let array2 = new Array(rows);
+            for (let i = 0; i < rows; i++) {
+                array2[i] = new Array(cols);
+            }
+
+            // 7 question DIR 1
+            array2[0][0] = 1;
+            array2[0][1] = 0.5;
+            array2[0][2] = 0.25;
+            array2[0][3] = 0;
+
+            // 8 question DIR 2
+            array2[1][0] = 1;
+            array2[1][1] = 0.5;
+            array2[1][2] = 0.25;
+            array2[1][3] = 0;
+
+            // 9 question DIR 3
+            array2[2][0] = 1;
+            array2[2][1] = 0.5;
+            array2[2][2] = 0.25;
+            array2[2][3] = 0;
+
+            // 10 question DIR 4
+            array2[3][0] = 1;
+            array2[3][1] = 0.5;
+            array2[3][2] = 0.25;
+            array2[3][3] = 0;
+
+            // 11 question DIR 5
+            array2[4][0] = 1;
+            array2[4][1] = 0.5;
+            array2[4][2] = 0.25;
+            array2[4][3] = 0;
+
+            // 12 question DIR 6
+            array2[5][0] = 1;
+            array2[5][1] = 0.5;
+            array2[5][2] = 0.25;
+            array2[5][3] = 0;
+
+            let direction = [0, 0, 0, 0, 0, 0];
+            let test;
+            for (let i = 0; i < 6; i++) {
+                test = array[i][selectedanswers[i]].slice();
+                let counter = test.length - 1;
+
+                while (counter >= 0) {
+                    direction[test[counter] - 1]++;
+                    counter--;
+                }
+            }
+
+            for (let i = 0; i < 6; i++) {
+                direction[i] += array2[i][selectedanswers[i + 6]];
+            }
+
+
+            percentageDIR1 = (direction[0] / 7) * 100;
+            percentageDIR2 = (direction[1] / 6) * 100;
+            percentageDIR3 = (direction[2] / 7) * 100;
+            percentageDIR4 = (direction[3] / 6) * 100;
+            percentageDIR5 = (direction[4] / 7) * 100;
+            percentageDIR6 = (direction[5] / 7) * 100;
+
+            var percentageDIR1 = Math.floor(percentageDIR1);
+            var percentageDIR2 = Math.floor(percentageDIR2);
+            var percentageDIR3 = Math.floor(percentageDIR3);
+            var percentageDIR4 = Math.floor(percentageDIR4);
+            var percentageDIR5 = Math.floor(percentageDIR5);
+            var percentageDIR6 = Math.floor(percentageDIR6);
+
+         
+            hideButton();
+            disableAllRadioButtons();
+
+            var Dir1score = document.getElementById('Dir1score');
+            Dir1score.value = percentageDIR1;
+
+            var Dir2score = document.getElementById('Dir2score');
+            Dir2score.value = percentageDIR2;
+
+            var Dir3score = document.getElementById('Dir3score');
+            Dir3score.value = percentageDIR3;
+
+            var Dir4score = document.getElementById('Dir4score');
+            Dir4score.value = percentageDIR4;
+
+            var Dir5score = document.getElementById('Dir5score');
+            Dir5score.value = percentageDIR5;
+
+            var Dir6score = document.getElementById('Dir6score');
+            Dir6score.value = percentageDIR6;
+
+
+            var hiddenButton = document.getElementById('hiddenButtonProceed');
+            hiddenButton.style.display = 'inline-block';
+           
+        }
+
+        
+    }
+</script>
