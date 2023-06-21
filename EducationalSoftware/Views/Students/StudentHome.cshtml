@@ -105,6 +105,9 @@
 
                     @{
                         List<int> completedDirections = ViewBag.completedDirections;
+                        double avgGradedLessons = ViewBag.avgGradedLessons;
+                        int gradedLessons = ViewBag.gradedLessons;
+                        double scoreAvgQuizzes = ViewBag.scoreAvgQuizzes;
                     }
                     <!-- Content Row -->
                     <div class="row">
@@ -116,10 +119,10 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-m font-weight-bold text-primary  mb-2">
-                                                Στατιστικο 1:
+                                               Μ.Ο. Βαθμών Των Quiz
                                             </div>
                                             <br />
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">0/8</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">@scoreAvgQuizzes%</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -136,9 +139,9 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-1">
                                             <div class="text-m font-weight-bold text-success mb-2">
-                                                Στατιστικο 2:
+                                                Καταχωρημένοι Βαθμοί σε Μαθήματα:
                                             </div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">4/8</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">@gradedLessons/20</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -155,9 +158,9 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-m font-weight-bold text-info mb-2">
-                                                Καταχωρημένοι Βαθμοί σε Μαθήματα:
+                                                Μ.Ο. Βαθμών Καταχωρημένων Μαθημάτων
                                             </div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">5/20</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"> @avgGradedLessons/10</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
@@ -369,7 +372,7 @@
                                              src="~/img/AiSpecialist.png" alt="...">
                                     </div>
                                     <p align="justify">
-                                        Ο ρόλος ενός  Ειδικός Μηχανικής Μάθησης και Τεχνητής Νοημοσύνης περιλαμβάνει την ανάπτυξη και εφαρμογή αλγορίθμων και μοντέλων μηχανικής μάθησης. Αναλύουν δεδομένα,
+                                        Ο ρόλος ενός  Ειδικού Μηχανικής Μάθησης και Τεχνητής Νοημοσύνης περιλαμβάνει την ανάπτυξη και εφαρμογή αλγορίθμων και μοντέλων μηχανικής μάθησης. Αναλύουν δεδομένα,
                                         εκπαιδεύουν μοντέλα και βελτιστοποιούν την απόδοση. Συνεργάζονται με ομάδες για την επίλυση σύνθετων προβλημάτων και εφαρμόζουν τεχνικές τεχνητής νοημοσύνης για να
                                         καταστήσουν δυνατή την αυτοματοποίηση, την πρόβλεψη και τη λήψη αποφάσεων σε διάφορους τομείς.
                                     </p>
@@ -430,9 +433,16 @@
                 <button class=" styled-button" onclick="window.location.href = '/Students/RepeatQuiz'">Επαναληπτικό quiz </button>
             </div>
             <div class=" align-bottom h4 " style="text-align:center">
-                <button class=" styled-button" onclick="window.location.href = '/Students/RecommendationQuiz'">Quiz Συστάσεων</button>
+                <button class=" styled-button" onclick="window.location.href = '/Students/RecommendationQuiz'">Quiz Προτιμήσεων</button>
             </div>
         </div>
+        if (ViewBag.RecommendationQuizDone == "true")
+        {
+            <br />
+            <div class="h4 " style="text-align:center">
+                <button class="alert-info" onclick="window.location.href = '/Students/SystemRecommendation'">Συστάσεις συστήματος</button>
+            </div>
+        }
     }
     else
     {
@@ -443,13 +453,15 @@
             <div class=" align-bottom h4 " style="text-align:center">
                 <button disabled class=" styled-button" onclick="window.location.href = '/Students/RecommendationQuiz'">Quiz Συστάσεων</button>
             </div>
-          
 
         </div>
         <p style="text-align:center" class="disabled-note">Αυτές οι δυνατότηες θα ξεκλειδωθούν οταν ολοκληρωθούν τα quiz όλων των κατευθύνσεων</p>
+
       
     }
    
+    <br /><br />
+
 
     <!-- Bootstrap core JavaScript-->
     <script src="~/js/home/vendor/jquery/jquery.min.js"></script>

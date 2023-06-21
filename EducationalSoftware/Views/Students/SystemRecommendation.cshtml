@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Direction Percentages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 80%;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .recommendation {
+            text-align: center;
+            margin-top: 24px;
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ποσοστά Κατευθύνσεων</h1>
+    <table>
+        <tr>
+            <th>Κατεύθυνση</th>
+            <th>Ποσοστό</th>
+        </tr>
+        <tr>
+            <td>Ειδικός Ανάλυσης Δεδομένων</td>
+            <td>  @ViewBag.DirectionsRecommendationScore[0]</td>
+        </tr>
+        <tr>
+            <td>Ειδικός Ασφάλειας και Προστασίας Δεδομένων</td>
+            <td>  @ViewBag.DirectionsRecommendationScore[1]</td>
+        </tr>
+        <tr>
+            <td>Μηχανικός Λογισμικού</td>
+            <td>  @ViewBag.DirectionsRecommendationScore[2]</td>
+        </tr>
+        <tr>
+            <td>Σχεδιαστής Εμπειρίας Χρηστών</td>
+            <td>  @ViewBag.DirectionsRecommendationScore[3]</td>
+        </tr>
+        <tr>
+            <td>Ειδικός Μηχανικής Μάθησης και Τεχνητής Νοημοσύνης</td>
+            <td>  @ViewBag.DirectionsRecommendationScore[4]</td>
+        </tr>
+        <tr>
+            <td>Προγραμματιστής Web </td>
+            <td>  @ViewBag.DirectionsRecommendationScore[5]</td>
+        </tr>
+    </table>
+
+    <div class="recommendation">
+       
+        <p>Με βάση τα παραπάνω ποσοστά κατευθύνσεων η προτεινόμενη κατεύθυνση η κατευθύνσεις απο το σύστημα για εργασία ή μεταπτυχιακές  σπουδες ειναι οι εξής: <br />
+            @{
+                int i = 0;
+                foreach (String title in ViewBag.maxPercentagesDirTitles)
+                {
+                    i++;
+                    String s = i + ". ";
+                    @s @title    
+                    <br />
+                }
+            }
+        </p>
+    </div>
+</body>
+</html>

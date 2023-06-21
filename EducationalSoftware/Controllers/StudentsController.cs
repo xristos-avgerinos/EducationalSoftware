@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Data;
 using System.Diagnostics;
+using System.Collections.Generic;
 
 namespace EducationalSoftware.Controllers
 {
@@ -55,13 +56,34 @@ namespace EducationalSoftware.Controllers
             if (HttpContext.Session.GetString("username") != null)
             {
                 String username = HttpContext.Session.GetString("username");
-                StudentDirectionQuiz studentDirQuiz = new StudentDirectionQuiz();
 
                 var completedDirections = _context.StudentDirectionQuizzes.
                     Where(u => u.Username == username && u.Score != null).Select(s => s.IdDirection);
 
                 ViewBag.completedDirections = completedDirections.ToList();
 
+                var gradedLessonsDb = _context.StudentGrades.Where(u => u.Username == username && u.Grade != null).Select(s=>s.Grade);
+                var avg = gradedLessonsDb.Average();
+                ViewBag.avgGradedLessons = Math.Round((double)avg, 2);
+                ViewBag.gradedLessons = gradedLessonsDb.Count();
+
+                var avgQuizzes = _context.StudentDirectionQuizzes.
+                    Where(u => u.Username == username && u.Score != null).Select(s => s.Score).Average();  
+
+                ViewBag.scoreAvgQuizzes = Math.Round((double)avgQuizzes, 2);
+               
+                int RecommendationQuizCount = _context.StudentRecommendationQuizzes.
+                    Where(u => u.Username == username && u.Score != null).Count();
+
+                if (RecommendationQuizCount == 6)
+                {
+                    ViewBag.RecommendationQuizDone = "true";
+                }
+                else
+                { 
+                    ViewBag.RecommendationQuizDone = "false";
+                }
+                
                 return View();
             }
             else
@@ -553,8 +575,77 @@ namespace EducationalSoftware.Controllers
             {
                 return RedirectToAction("StudentsLogin", "Students");
             }
-        } 
-     
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.Any, NoStore = true)]
+        public IActionResult SystemRecommendation()
+        {
+            if (HttpContext.Session.GetString("username") != null)
+            {
+                String username = HttpContext.Session.GetString("username");
+
+                double[] DirectionsRecommendationScore = new double[6];
+                double finalScoreDIRi;
+
+                for (int i = 0; i < 6; i++)
+                {
+                    //sto quiz systasevn dinv baros 30% gia tis telikes systaseiw poy tha prokipsoyn apo to sistima gia kathe kateythinsi
+                    var RecommendationScoreDIRi = _context.StudentRecommendationQuizzes.
+                    FirstOrDefault(u => u.Username == username && u.IdDirection == i+1).Score;
+
+                    finalScoreDIRi = ((double)RecommendationScoreDIRi * 30) / 100;
+
+                    //sto quiz tiw kathe kateythinsis dinv baros 30% gia tis telikes systaseiw poy tha prokipsoyn apo to sistima
+                    var quizScoreDIRi = _context.StudentDirectionQuizzes.FirstOrDefault(u => u.Username == username && u.IdDirection == i + 1).Score;
+                    finalScoreDIRi += ((double)quizScoreDIRi * 30) / 100;
+
+                    //sto MO apo ta bathmologimena mathimata toy foititi kathe kateythinsis dinv baros 20% gia tis telikes systaseiw poy tha prokipsoyn apo to sistima
+                    var AvgGradedCoursesDIRi = _context.StudentGrades.Include(s => s.IdCourseNavigation).Where(s => s.Username == username && s.IdCourseNavigation.IdDirection == i + 1 && s.Grade != null).Select(s => s.Grade).Average();
+                    if (AvgGradedCoursesDIRi == null) {
+                        AvgGradedCoursesDIRi = 0;
+                    }
+                    finalScoreDIRi += ((double)AvgGradedCoursesDIRi * 20) / 10;
+
+                    //sto traffic kathe kateythinsis dinv baros to ypoloipo 20% gia tis telikes systaseiw poy tha prokipsoyn apo to sistima
+                    var maxDirTraffic = _context.StudentDirectionTraffics.Where(s=>s.Username == username).Select(s => s.Traffic).Max();
+                    var trafficDIRi = _context.StudentDirectionTraffics.FirstOrDefault(s => s.Username == username && s.IdDirection == i + 1).Traffic;
+                    finalScoreDIRi += ((double)trafficDIRi/(double)maxDirTraffic) * 20 ;
+
+                    DirectionsRecommendationScore[i] = Math.Round((double)finalScoreDIRi, 2);
+                }
+
+                ViewBag.DirectionsRecommendationScore = DirectionsRecommendationScore;
+
+                Dictionary<int, string> indexStringMap = new Dictionary<int, string>();
+                // Add entries to the map
+                indexStringMap.Add(0, "Ειδικός Ανάλυσης Δεδομένων");
+                indexStringMap.Add(1, "Ειδικός Ασφάλειας και Προστασίας Δεδομένων");
+                indexStringMap.Add(2, "Μηχανικός Λογισμικού");
+                indexStringMap.Add(3, "Σχεδιαστής Εμπειρίας Χρηστών");
+                indexStringMap.Add(4, "Ειδικός Μηχανικής Μάθησης και Τεχνητής Νοημοσύνης");
+                indexStringMap.Add(5, "Προγραμματιστής Web");
+
+                double max = DirectionsRecommendationScore.Max();
+                var maxIndices = Enumerable.Range(0, DirectionsRecommendationScore.Length)
+                                           .Where(i => DirectionsRecommendationScore[i] == max)
+                                           .ToList();
+
+                String[] maxPercentagesDirTitles = new string[maxIndices.Count];
+                foreach (int index in maxIndices)
+                {
+                    maxPercentagesDirTitles[index] = indexStringMap[index];
+                }
+                ViewBag.maxPercentagesDirTitles = maxPercentagesDirTitles;
+
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("StudentsLogin", "Students");
+            }
+        }
+        
+
         public IActionResult Logout()
         {
             return RedirectToAction("StudentsLogin", "Students");
