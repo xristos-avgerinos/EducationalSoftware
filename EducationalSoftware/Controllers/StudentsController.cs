@@ -569,7 +569,7 @@ namespace EducationalSoftware.Controllers
                 }
 
                
-                return RedirectToAction("StudentHome", "Students");
+                return RedirectToAction("SystemRecommendation", "Students");
             }
             else
             {
@@ -595,7 +595,7 @@ namespace EducationalSoftware.Controllers
 
                     finalScoreDIRi = ((double)RecommendationScoreDIRi * 30) / 100;
 
-                    //sto quiz tiw kathe kateythinsis dinv baros 30% gia tis telikes systaseiw poy tha prokipsoyn apo to sistima
+                    //sto quiz tis kathe kateythinsis dinv baros 30% gia tis telikes systaseiw poy tha prokipsoyn apo to sistima
                     var quizScoreDIRi = _context.StudentDirectionQuizzes.FirstOrDefault(u => u.Username == username && u.IdDirection == i + 1).Score;
                     finalScoreDIRi += ((double)quizScoreDIRi * 30) / 100;
 
