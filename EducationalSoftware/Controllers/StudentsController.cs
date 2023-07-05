@@ -631,9 +631,11 @@ namespace EducationalSoftware.Controllers
                                            .ToList();
 
                 String[] maxPercentagesDirTitles = new string[maxIndices.Count];
+                int x = 0;
                 foreach (int index in maxIndices)
                 {
-                    maxPercentagesDirTitles[index] = indexStringMap[index];
+                    maxPercentagesDirTitles[x] = indexStringMap[index];
+                    x++;
                 }
                 ViewBag.maxPercentagesDirTitles = maxPercentagesDirTitles;
 
